@@ -1,0 +1,28 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "edge": [6, 7, 8, 9, 10],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20],
+    "energy": [26, 27, 28, 29, 30]
+  },
+  "fixed": [
+    {"name": "polymer", "color": "#1A1B1E", "slots": [41, 42, 43, 44, 45], "glow": false, "alpha": 1}
+  ],
+  "layers": [
+    {"part": "base", "sprite": "pommel.png", "plane": "front", "at": [-1.5, -4, 0], "depth": 3},
+    {"part": "grip", "sprite": "grip.png", "plane": "front", "at": [-1.5, 1, 0], "depth": 3},
+    {"part": "glow", "sprite": "light.png", "plane": "front", "at": [-2.5, 1, 0], "depth": 1},
+    {"part": "base", "sprite": "switch.png", "plane": "front", "at": [-2.5, 0, 0], "depth": 1},
+    {"part": "glow", "sprite": "ring.png", "plane": "front", "at": [-1.5, 2, 0], "depth": 3},
+    {"part": "base", "sprite": "collar.png", "plane": "front", "at": [-1.5, 3, 0], "depth": 3},
+    {"part": "tube2", "sprite": "tube2.png", "plane": "front", "at": [-1, 9.5, 0], "depth": 2},
+    {"part": "tube3", "sprite": "tube3.png", "plane": "front", "at": [-0.5, 16, 0], "depth": 1},
+    {"part": "tip", "sprite": "cap.png", "plane": "front", "at": [-1.5, 17, 0], "depth": 1, "depthMap": "cap_depth.png"},
+    {"part": "tip", "sprite": "prongs.png", "plane": "front", "at": [-1.5, 18, 0], "depth": 1}
+  ],
+  "arcs": {"from": [-1, 18, 0], "to": [1, 18, 0], "width": 0.35},
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

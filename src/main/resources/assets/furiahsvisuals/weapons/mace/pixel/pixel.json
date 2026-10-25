@@ -1,0 +1,26 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20]
+  },
+  "fixed": [],
+  "layers": [
+    {"part": "head", "sprite": "head 13.png", "plane": "top", "at": [-3.5, 13.5, -3.5], "depth": 1},
+    {"part": "head", "sprite": "head 14.png", "plane": "top", "at": [-3.5, 14.5, -3.5], "depth": 1},
+    {"part": "head", "sprite": "head 15.png", "plane": "top", "at": [-3.5, 15.5, -3.5], "depth": 1},
+    {"part": "head", "sprite": "head 16.png", "plane": "top", "at": [-3.5, 16.5, -3.5], "depth": 1},
+    {"part": "head", "sprite": "head 17.png", "plane": "top", "at": [-3.5, 17.5, -3.5], "depth": 1},
+    {"part": "head", "sprite": "head 18.png", "plane": "top", "at": [-3.5, 18.5, -3.5], "depth": 1},
+    {"part": "head", "sprite": "knob.png", "plane": "front", "at": [-0.5, 21, 0], "depth": 1},
+    {"part": "haft", "sprite": "collar.png", "plane": "front", "at": [-2.5, 13, 0], "depth": 5},
+    {"part": "haft", "sprite": "haft.png", "plane": "front", "at": [-1, 12, 0], "depth": 2},
+    {"part": "grip", "sprite": "grip.png", "plane": "front", "at": [-1.5, 1, 0], "depth": 3},
+    {"part": "haft", "sprite": "pommel.png", "plane": "front", "at": [-1.5, -4, 0], "depth": 3},
+    {"part": "haft", "sprite": "eye.png", "plane": "front", "at": [-0.5, -5, 0], "depth": 1},
+    {"part": "loop", "sprite": "loop.png", "plane": "side", "at": [0, -5, -1.5], "depth": 1}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

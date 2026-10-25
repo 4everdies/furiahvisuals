@@ -1,0 +1,126 @@
+{
+  "comment": "Furiah's Visuals: the knife animation set (Tactical Bayonet, Dagger, Karambit, Butterfly Knife). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise). weapon: the knife in the fist (x edge, y handle, z flat). Every clip here is original to this mod.",
+  "clips": {
+    "knife_swing_1": {
+      "comment": "A flat slash from right to left.",
+      "length": 0.3,
+      "dir": [-1, 0.1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [0.05, 0.015, 0.03], [0, -14, 9], "outSine"],
+        [0.38, [-0.24, 0.05, -0.12], [-4, 44, -26], "outCubic"],
+        [0.62, [-0.16, 0.02, -0.07], [-2, 30, -16], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "knife_swing_2": {
+      "comment": "A rising backhand slash from left to right.",
+      "length": 0.3,
+      "dir": [1, 0.45],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [-0.07, -0.03, 0.01], [-6, 18, -12], "outSine"],
+        [0.4, [0.1, 0.11, -0.1], [16, -34, 30], "outCubic"],
+        [0.65, [0.06, 0.06, -0.05], [8, -18, 16], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "knife_swing_3": {
+      "comment": "A diagonal cut down to the left.",
+      "length": 0.3,
+      "dir": [-0.6, -0.8],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.13, [0.03, 0.09, 0.03], [22, -8, 12], "outSine"],
+        [0.4, [-0.17, -0.12, -0.1], [-30, 26, -30], "outCubic"],
+        [0.66, [-0.09, -0.06, -0.05], [-16, 14, -16], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "knife_swing_4": {
+      "comment": "A straight stab.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.1, [0.02, -0.02, 0.06], [-4, -4, 0], "outSine"],
+        [0.34, [-0.12, 0.07, -0.32], [6, 16, 0], "outQuart"],
+        [0.6, [-0.07, 0.04, -0.18], [3, 9, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "knife_quick_swing_1": {
+      "comment": "Rapid clicks: a short flick to the left.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.28, [-0.13, 0.03, -0.07], [-2, 26, -16], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "knife_quick_swing_2": {
+      "comment": "Rapid clicks: a short flick back to the right.",
+      "length": 0.3,
+      "dir": [1, 0.3],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.28, [0.07, 0.06, -0.07], [8, -20, 16], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "knife_quick_swing_3": {
+      "comment": "Rapid clicks: a short jab.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.26, [-0.07, 0.04, -0.2], [3, 10, 0], "outQuart"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "knife_crit": {
+      "comment": "A critical hit: raised high, driven down and forward.",
+      "length": 0.3,
+      "dir": [-0.2, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [-0.02, 0.2, 0.05], [38, 6, 16], "outSine"],
+        [0.42, [-0.14, -0.1, -0.24], [-34, 20, -18], "outQuart"],
+        [0.7, [-0.07, -0.05, -0.12], [-16, 10, -8], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "knife_guard": {
+      "comment": "Blocking: the knife held upright in front, the edge out toward the attacker.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.24, -0.34, -0.66], "tip": [-0.12, 1, -0.28], "edge": [-0.6, 0, -1], "ease": "outCubic"}
+      ]
+    },
+    "knife_dual_guard": {
+      "comment": "Blocking with a knife in each hand: both lean in and cross in an X (the left hand's is this, mirrored).",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.17, -0.33, -0.62], "tip": [-0.55, 0.83, -0.1], "edge": [-0.8, -0.5, -0.35], "ease": "outCubic"}
+      ]
+    },
+    "knife_draw": {
+      "comment": "The draw: up from below with a half flip into the hand.",
+      "length": 0.42,
+      "right": [
+        [0.0, [0.12, -0.48, 0.12], [-50, -10, 30]],
+        [0.55, [-0.01, 0.03, -0.01], [6, 3, -6], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [-160, 0, 0]],
+        [0.2, [0, 0, 0], [-90, 0, 0], "linear"],
+        [0.45, [0, 0, 0], [-10, 0, 0], "outSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    }
+  }
+}

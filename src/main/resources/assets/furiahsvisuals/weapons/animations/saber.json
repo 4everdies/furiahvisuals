@@ -1,0 +1,98 @@
+{
+  "comment": "Furiah's Visuals: the animation set of one-handed swords held upright at the right (the Photon Edge and the other sabers). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). Every clip here is original to this mod.",
+  "clips": {
+    "saber_swing_1": {
+      "comment": "A fast diagonal slash from high on the right down to the lower left.",
+      "length": 0.3,
+      "dir": [-0.7, -0.7],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.05, 0.06, 0.03], [8, -10, -24], "outSine"],
+        [0.42, [-0.16, -0.08, -0.08], [-24, 14, 58], "outCubic"],
+        [0.66, [-0.2, -0.11, -0.04], [-28, 18, 66], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "saber_swing_2": {
+      "comment": "A flat slash from right to left, the blade laid forward.",
+      "length": 0.3,
+      "dir": [-1, 0.05],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.07, 0.02, 0.03], [-20, -20, -55], "outSine"],
+        [0.42, [-0.18, -0.02, -0.1], [-30, 30, 60], "outCubic"],
+        [0.66, [-0.22, -0.04, -0.05], [-32, 36, 68], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "saber_swing_3": {
+      "comment": "A rising backhand slash from the lower left up to the right.",
+      "length": 0.3,
+      "dir": [0.75, 0.65],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [-0.08, -0.1, 0.0], [-20, 14, 55], "outSine"],
+        [0.42, [0.08, 0.1, -0.08], [10, -24, -30], "outCubic"],
+        [0.66, [0.1, 0.12, -0.02], [14, -28, -36], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "saber_quick_swing_1": {
+      "comment": "Rapid clicks: a short cut down to the left.",
+      "length": 0.3,
+      "dir": [-0.8, -0.5],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.1, -0.05, -0.06], [-22, 10, 34], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "saber_quick_swing_2": {
+      "comment": "Rapid clicks: a short cut back up to the right.",
+      "length": 0.3,
+      "dir": [0.8, 0.4],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [0.06, 0.05, -0.05], [8, -12, -24], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "saber_crit": {
+      "comment": "A critical hit: a lunging thrust, the point driven at the target.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.03, 0.02, 0.06], [6, -6, 0], "outSine"],
+        [0.38, [-0.12, 0.08, -0.32], [-62, 12, 4], "outQuart"],
+        [0.66, [-0.08, 0.05, -0.18], [-50, 10, 2], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "saber_guard": {
+      "comment": "Blocking: the blade held level across the view, its edge up toward the blow.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.2, -0.2, -0.58], "tip": [-1, 0.18, -0.12], "edge": [0, 0.35, -0.94], "ease": "outCubic"}
+      ]
+    },
+    "saber_dual_guard": {
+      "comment": "Blocking with a saber in each hand: the blades crossed in an X (the left hand's is this, mirrored).",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.17, -0.3, -0.6], "tip": [-0.58, 0.8, -0.14], "edge": [-0.8, -0.52, -0.3], "ease": "outCubic"}
+      ]
+    },
+    "saber_draw": {
+      "comment": "The draw: up from the hip in one sweep, into the ready hold.",
+      "length": 0.55,
+      "right": [
+        [0.0, [0.02, -0.5, 0.15], [-60, 10, 30]],
+        [0.55, [0.0, 0.02, 0.0], [4, 0, -4], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    }
+  }
+}

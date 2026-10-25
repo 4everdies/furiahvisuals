@@ -1,0 +1,149 @@
+{
+  "comment": "Furiah's Visuals: the kunai's animation set (a throwing knife held point forward at the right). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}); weapon: turns in the fist's frame (x edge, y handle, z flat), with the offsets that keep the ring on the finger when it spins round it. Every clip here is original to this mod.",
+  "clips": {
+    "kunai_swing_1": {
+      "comment": "A quick stab straight ahead and back.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.03, 0.02, 0.06], [4, -4, 0], "outSine"],
+        [0.38, [-0.08, 0.03, -0.3], [-8, 10, 0], "outQuart"],
+        [0.62, [-0.06, 0.02, -0.2], [-6, 8, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "kunai_swing_2": {
+      "comment": "A backhand flick: the wrist turned over and the blade flicked from the left across to the right.",
+      "length": 0.3,
+      "dir": [1, 0.1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [-0.08, 0.02, 0.0], [-10, 30, 40], "outSine"],
+        [0.4, [0.08, -0.01, -0.08], [-14, -36, -50], "outCubic"],
+        [0.62, [0.09, -0.02, -0.05], [-15, -40, -54], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "kunai_swing_3": {
+      "comment": "A stab low and to the left, the wrist turning in.",
+      "length": 0.3,
+      "dir": [-0.6, -0.4],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.04, 0.03, 0.05], [6, -8, -10], "outSine"],
+        [0.38, [-0.14, -0.08, -0.24], [-14, 18, 16], "outQuart"],
+        [0.62, [-0.11, -0.06, -0.16], [-11, 15, 13], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "kunai_quick_swing_1": {
+      "comment": "Rapid clicks: a short stab.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.05, 0.02, -0.16], [-5, 6, 0], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "kunai_quick_swing_2": {
+      "comment": "Rapid clicks: a short backhand flick.",
+      "length": 0.3,
+      "dir": [1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [0.05, 0.0, -0.05], [-8, -22, -30], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "kunai_crit": {
+      "comment": "A critical hit: drawn back low, then a lunging stab driven far forward, and the recovery.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.18, [0.05, -0.04, 0.1], [8, -6, 0], "outSine"],
+        [0.44, [-0.12, 0.06, -0.42], [-12, 14, 4], "outQuart"],
+        [0.68, [-0.09, 0.04, -0.3], [-9, 11, 3], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "kunai_guard": {
+      "comment": "Blocking: the kunai upright in front of the chest, its edge turned to the left.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.14, -0.3, -0.56], "tip": [-0.08, 1, 0.06], "edge": [-1, -0.08, 0], "ease": "outCubic"}
+      ]
+    },
+    "kunai_dual_guard": {
+      "comment": "Blocking with a kunai in each hand: both upright before the chest, leaning in so the blades cross at the top (the left hand's is this, mirrored).",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.12, -0.32, -0.56], "tip": [-0.3, 0.95, 0.04], "edge": [-0.95, -0.3, 0], "ease": "outCubic"}
+      ]
+    },
+    "kunai_draw": {
+      "comment": "The draw: brought up from below spinning once round the finger through its ring, then caught in the grip.",
+      "length": 0.6,
+      "right": [
+        [0.0, [0.06, -0.42, 0.1], [-30, 10, 10]],
+        {"t": 0.12, "pos": [0.3, -0.24, -0.86], "tip": [0, 1, 0], "edge": [1, 0, 0], "ease": "outSine"},
+        {"t": 0.62, "pos": [0.3, -0.22, -0.86], "tip": [0, 1, 0], "edge": [1, 0, 0], "ease": "linear"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [0, 0, 0], [0, 0, 0]],
+        [0.1825, [-0.0972, -0.0403, 0], [0, 0, 45], "inSine"],
+        [0.245, [-0.1375, -0.1375, 0], [0, 0, 90], "linear"],
+        [0.3075, [-0.0972, -0.2347, 0], [0, 0, 135], "linear"],
+        [0.37, [0, -0.275, 0], [0, 0, 180], "linear"],
+        [0.4325, [0.0972, -0.2347, 0], [0, 0, 225], "linear"],
+        [0.495, [0.1375, -0.1375, 0], [0, 0, 270], "linear"],
+        [0.5575, [0.0972, -0.0403, 0], [0, 0, 315], "linear"],
+        [0.62, [0, 0, 0], [0, 0, 360], "outSine"]
+      ]
+    },
+    "kunai_ring_spin": {
+      "comment": "Ring Spin: held up with a finger through the ring, its flat toward you, and spun three turns round it, gathering speed and slowing; then caught back in the grip.",
+      "length": 2.0,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.14, "pos": [0.26, -0.2, -0.9], "tip": [0, 1, 0], "edge": [1, 0, 0], "ease": "inOutCubic"},
+        {"t": 0.82, "pos": [0.26, -0.2, -0.9], "tip": [0, 1, 0], "edge": [1, 0, 0], "ease": "linear"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [0, 0, 0], [0, 0, 0]],
+        [0.2058, [-0.0712, -0.0198, 0], [0, 0, 31.1641], "inSine"],
+        [0.2317, [-0.1256, -0.0814, 0], [0, 0, 65.9375], "linear"],
+        [0.2575, [-0.1334, -0.1707, 0], [0, 0, 103.9922], "linear"],
+        [0.2833, [-0.0789, -0.2501, 0], [0, 0, 145], "linear"],
+        [0.3092, [0.0206, -0.2734, 0], [0, 0, 188.6328], "linear"],
+        [0.335, [0.112, -0.2172, 0], [0, 0, 234.5625], "linear"],
+        [0.3608, [0.1343, -0.1078, 0], [0, 0, 282.4609], "linear"],
+        [0.3867, [0.0646, -0.0161, 0], [0, 0, 332], "linear"],
+        [0.4125, [-0.0534, -0.0108, 0], [0, 0, 382.8516], "linear"],
+        [0.4383, [-0.1326, -0.1012, 0], [0, 0, 434.6875], "linear"],
+        [0.4642, [-0.1096, -0.2206, 0], [0, 0, 487.1797], "linear"],
+        [0.49, [0, -0.275, 0], [0, 0, 540], "linear"],
+        [0.5158, [0.1096, -0.2206, 0], [0, 0, 592.8203], "linear"],
+        [0.5417, [0.1326, -0.1012, 0], [0, 0, 645.3125], "linear"],
+        [0.5675, [0.0534, -0.0108, 0], [0, 0, 697.1484], "linear"],
+        [0.5933, [-0.0646, -0.0161, 0], [0, 0, 748], "linear"],
+        [0.6192, [-0.1343, -0.1078, 0], [0, 0, 797.5391], "linear"],
+        [0.645, [-0.112, -0.2172, 0], [0, 0, 845.4375], "linear"],
+        [0.6708, [-0.0206, -0.2734, 0], [0, 0, 891.3672], "linear"],
+        [0.6967, [0.0789, -0.2501, 0], [0, 0, 935], "linear"],
+        [0.7225, [0.1334, -0.1707, 0], [0, 0, 976.0078], "linear"],
+        [0.7483, [0.1256, -0.0814, 0], [0, 0, 1014.0625], "linear"],
+        [0.7742, [0.0712, -0.0198, 0], [0, 0, 1048.8359], "linear"],
+        [0.8, [0, 0, 0], [0, 0, 1080], "outSine"]
+      ]
+    }
+  }
+}

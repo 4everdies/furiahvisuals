@@ -1,0 +1,124 @@
+{
+  "comment": "Furiah's Visuals: the longsword's animation set (a knight's sword held upright at the right). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). Every clip here is original to this mod.",
+  "clips": {
+    "longsword_swing_1": {
+      "comment": "A diagonal cut from high on the right down to the lower left, the weight of the blade carrying through.",
+      "length": 0.3,
+      "dir": [-0.7, -0.7],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [0.06, 0.08, 0.04], [10, -12, -28], "outSine"],
+        [0.44, [-0.18, -0.1, -0.08], [-28, 16, 62], "outCubic"],
+        [0.68, [-0.22, -0.13, -0.04], [-32, 20, 70], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "longsword_swing_2": {
+      "comment": "A horizontal cut from right to left, the blade laid level at chest height.",
+      "length": 0.3,
+      "dir": [-1, 0.0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [0.08, 0.0, 0.04], [-24, -24, -62], "outSine"],
+        [0.44, [-0.2, -0.04, -0.12], [-34, 34, 64], "outCubic"],
+        [0.68, [-0.24, -0.06, -0.06], [-36, 40, 72], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "longsword_swing_3": {
+      "comment": "A rising diagonal from the lower left back up to the right.",
+      "length": 0.3,
+      "dir": [0.75, 0.65],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [-0.1, -0.12, 0.0], [-22, 16, 58], "outSine"],
+        [0.44, [0.09, 0.11, -0.09], [12, -26, -32], "outCubic"],
+        [0.68, [0.11, 0.13, -0.03], [16, -30, -38], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "longsword_quick_swing_1": {
+      "comment": "Rapid clicks: a short diagonal cut down to the left.",
+      "length": 0.3,
+      "dir": [-0.8, -0.55],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.11, -0.06, -0.06], [-24, 11, 36], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "longsword_quick_swing_2": {
+      "comment": "Rapid clicks: a short flat cut back to the right.",
+      "length": 0.3,
+      "dir": [0.9, 0.2],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [0.07, 0.03, -0.05], [-10, -16, -30], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "longsword_crit": {
+      "comment": "A critical hit: the arm drawn back, then a straight thrust, the point driven at the target, and the recovery.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [0.04, 0.03, 0.08], [4, -8, 0], "outSine"],
+        [0.4, [-0.14, 0.08, -0.36], [-66, 14, 4], "outQuart"],
+        [0.66, [-0.1, 0.06, -0.22], [-54, 12, 2], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "longsword_guard": {
+      "comment": "Blocking: the blade angled across the body, point up and to the left, its edge turned toward the blow.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.2, -0.26, -0.6], "tip": [-0.6, 0.78, -0.18], "edge": [0.35, 0.1, -0.93], "ease": "outCubic"}
+      ]
+    },
+    "longsword_dual_guard": {
+      "comment": "Blocking with a longsword in each hand: the blades crossed in an X (the left hand's is this, mirrored).",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.17, -0.3, -0.6], "tip": [-0.58, 0.8, -0.14], "edge": [-0.8, -0.52, -0.3], "ease": "outCubic"}
+      ]
+    },
+    "longsword_draw": {
+      "comment": "The draw: up from the hip in a short arc, over the top a little and settling into the hold.",
+      "length": 0.5,
+      "right": [
+        [0.0, [0.06, -0.56, 0.1], [-48, 22, 40]],
+        [0.38, [0.03, -0.12, -0.04], [-6, 8, 14], "outSine"],
+        [0.62, [0.0, 0.04, -0.02], [8, -3, -6], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "longsword_salute": {
+      "comment": "The knight's salute: the hilt raised before the face, the blade upright, its flat toward you; held; then swept down and out to the right, point low, and back to the hold.",
+      "length": 2.5,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.2, "pos": [0.07, -0.28, -0.5], "tip": [0.02, 1, 0.08], "edge": [-1, 0, 0.05], "ease": "inOutCubic"},
+        {"t": 0.5, "pos": [0.07, -0.27, -0.5], "tip": [0.0, 1, 0.1], "edge": [-1, 0, 0.03], "ease": "inOutSine"},
+        {"t": 0.72, "pos": [0.34, -0.44, -0.58], "tip": [0.48, -0.62, -0.62], "edge": [0.3, 0.62, -0.72], "ease": "inOutCubic"},
+        {"t": 0.8, "pos": [0.34, -0.44, -0.58], "tip": [0.48, -0.62, -0.62], "edge": [0.3, 0.62, -0.72], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "longsword_plant_lean": {
+      "comment": "Plant & lean: the point set down on the ground in front and to the right, the hand resting on the hilt; it is leaned on, breathing, then lifted back into the hold.",
+      "length": 3.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.16, "pos": [0.12, -0.2, -0.95], "tip": [0.02, -0.96, -0.28], "edge": [1, 0, 0.05], "ease": "inOutCubic"},
+        {"t": 0.22, "pos": [0.12, -0.22, -0.95], "tip": [0.02, -0.96, -0.28], "edge": [1, 0, 0.05], "ease": "outSine"},
+        {"t": 0.48, "pos": [0.12, -0.24, -0.93], "tip": [0.02, -0.97, -0.24], "edge": [1, 0, 0.05], "ease": "inOutSine"},
+        {"t": 0.66, "pos": [0.12, -0.23, -0.94], "tip": [0.02, -0.96, -0.26], "edge": [1, 0, 0.05], "ease": "inOutSine"},
+        {"t": 0.82, "pos": [0.12, -0.22, -0.95], "tip": [0.02, -0.96, -0.28], "edge": [1, 0, 0.05], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ]
+    }
+  }
+}

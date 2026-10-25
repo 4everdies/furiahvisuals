@@ -1,0 +1,35 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20],
+    "accent": [21, 22, 23, 24, 25]
+  },
+  "fixed": [
+    {"name": "horn", "color": "#D8CCB0", "slots": [41, 42, 43, 44, 45], "glow": false, "alpha": 1},
+    {"name": "arrow wood", "color": "#C8A070", "slots": [46, 47, 48, 49, 50], "glow": false, "alpha": 1},
+    {"name": "nock", "color": "#2A2420", "slots": [51, 52, 53, 54, 55], "glow": false, "alpha": 1}
+  ],
+  "layers": [
+    {"part": "riser", "sprite": "riser.png", "plane": "front", "at": [-1, 4, 0], "depth": 2},
+    {"part": "limb_u1", "sprite": "limb_u1.png", "plane": "front", "at": [-1, 10, 0], "depth": 2},
+    {"part": "limb_u2", "sprite": "limb_u2.png", "plane": "front", "at": [-2, 16, 0], "depth": 2},
+    {"part": "limb_u3", "sprite": "limb_u3.png", "plane": "front", "at": [-4, 22, 0], "depth": 2},
+    {"part": "limb_u4", "sprite": "limb_u4.png", "plane": "front", "at": [-6, 28, 0], "depth": 2},
+    {"part": "limb_l1", "sprite": "limb_l1.png", "plane": "front", "at": [-1, -4, 0], "depth": 2},
+    {"part": "limb_l2", "sprite": "limb_l2.png", "plane": "front", "at": [-2, -10, 0], "depth": 2},
+    {"part": "limb_l3", "sprite": "limb_l3.png", "plane": "front", "at": [-4, -16, 0], "depth": 2},
+    {"part": "limb_l4", "sprite": "limb_l4.png", "plane": "front", "at": [-6, -22, 0], "depth": 2},
+    {"part": "tip_u", "sprite": "tip_u.png", "plane": "front", "at": [-6, 30, 0], "depth": 2},
+    {"part": "tip_l", "sprite": "tip_l.png", "plane": "front", "at": [-6, -28, 0], "depth": 2},
+    {"part": "grip", "sprite": "grip.png", "plane": "front", "at": [-1.5, 2, 0], "depth": 3},
+    {"part": "arrow", "sprite": "arrow.png", "plane": "front", "at": [-5.5, 3.5, 1.5], "depth": 1},
+    {"part": "arrow_head", "sprite": "arrow head.png", "plane": "front", "at": [17.5, 4.5, 1.5], "depth": 1},
+    {"part": "arrow_fletch", "sprite": "fletch up.png", "plane": "front", "at": [-4.5, 4.5, 1.5], "depth": 1},
+    {"part": "arrow_fletch", "sprite": "fletch down.png", "plane": "front", "at": [-4.5, 2.5, 1.5], "depth": 1},
+    {"part": "arrow_fletch", "sprite": "fletch out.png", "plane": "front", "at": [-4.5, 3.5, 2.5], "depth": 1}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

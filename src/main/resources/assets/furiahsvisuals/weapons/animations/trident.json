@@ -1,0 +1,141 @@
+{
+  "comment": "Furiah's Visuals: the trident's animation set: both hands on the shaft, the prongs forward. Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). weapon: the trident in the fist's frame (x edge, y along the shaft, z flat). Every clip here is original to this mod.",
+  "clips": {
+    "trident_swing_1": {
+      "comment": "A thrust: drawn back a little, then the prongs driven straight ahead.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.02, -0.02, 0.09], [4, -2, 0], "outSine"],
+        [0.38, [-0.1, 0.05, -0.38], [-35, 10, 8], "outQuart"],
+        [0.62, [-0.06, 0.03, -0.22], [-24, 7, 5], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "trident_swing_2": {
+      "comment": "A short jab, high.",
+      "length": 0.3,
+      "dir": [0, 0.3],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [0.01, -0.04, 0.06], [0, -2, 0], "outSine"],
+        [0.34, [-0.07, 0.12, -0.3], [-20, 8, 6], "outQuart"],
+        [0.58, [-0.04, 0.08, -0.17], [-12, 5, 4], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "trident_swing_3": {
+      "comment": "A short jab, low, angled down at the legs.",
+      "length": 0.3,
+      "dir": [0, -0.3],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [0.01, 0.0, 0.06], [4, -2, 0], "outSine"],
+        [0.34, [-0.08, -0.06, -0.3], [-48, 9, 6], "outQuart"],
+        [0.58, [-0.05, -0.04, -0.18], [-36, 6, 4], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "trident_quick_swing_1": {
+      "comment": "Rapid clicks: a quick jab.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.05, 0.03, -0.2], [-22, 6, 4], "outQuart"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "trident_quick_swing_2": {
+      "comment": "Rapid clicks: another, a little to the left.",
+      "length": 0.3,
+      "dir": [-0.2, 0.1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.08, 0.05, -0.19], [-18, 12, 6], "outQuart"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "trident_crit": {
+      "comment": "A critical hit: raised high, the prongs turned down, and stabbed down in front, as at a fish.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.24, "pos": [0.3, 0.12, -0.62], "tip": [-0.12, -0.55, -0.83], "edge": [0.99, 0, -0.1], "ease": "outSine"},
+        {"t": 0.5, "pos": [0.22, -0.32, -0.78], "tip": [-0.1, -0.75, -0.65], "edge": [0.99, 0, -0.12], "ease": "outQuart"},
+        {"t": 0.72, "pos": [0.23, -0.29, -0.76], "tip": [-0.11, -0.72, -0.68], "edge": [0.99, 0, -0.12], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ]
+    },
+    "trident_guard": {
+      "comment": "Blocking: the shaft held across the body, the prongs up to the left to catch the blow between them.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.22, -0.26, -0.6], "tip": [-0.72, 0.66, -0.2], "edge": [0.66, 0.74, -0.1], "ease": "outCubic"}
+      ]
+    },
+    "trident_draw": {
+      "comment": "The draw: brought up point-down at the side and flipped end over end in the hand, the prongs swinging up into the hold.",
+      "length": 0.55,
+      "right": [
+        [0.0, [0.06, -0.3, 0.06], [-10, 0, 0]],
+        [0.6, [0.0, 0.03, 0.0], [-4, 0, 2], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [180, 0, 0]],
+        [0.18, [0, 0, 0], [180, 0, 0]],
+        [0.62, [0, 0, 0], [0, 0, 0], "inOutCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0]]
+      ]
+    },
+    "trident_prong_check": {
+      "comment": "Prong check: brought up in front, the prongs before you, and turned slowly one way and the other; a glint runs up the prongs three times as they catch the light.",
+      "length": 3.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.16, "pos": [0.3, -0.36, -0.55], "tip": [-0.42, 0.78, -0.47], "edge": [0.906, 0.423, 0.0], "ease": "inOutCubic"},
+        {"t": 0.42, "pos": [0.3, -0.36, -0.55], "tip": [-0.42, 0.78, -0.47], "edge": [0.628, 0.591, 0.508], "ease": "inOutSine"},
+        {"t": 0.66, "pos": [0.3, -0.35, -0.55], "tip": [-0.42, 0.78, -0.47], "edge": [0.856, 0.101, -0.508], "ease": "inOutSine"},
+        {"t": 0.84, "pos": [0.3, -0.36, -0.55], "tip": [-0.42, 0.78, -0.47], "edge": [0.906, 0.423, 0.0], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "glint": [[0.0, -1], [0.22, -1, "step"], [0.2201, 0.0, "step"], [0.36, 1.0, "inOutSine"], [0.3601, -1, "step"],
+        [0.44, -1, "step"], [0.4401, 0.0, "step"], [0.58, 1.0, "inOutSine"], [0.5801, -1, "step"],
+        [0.64, -1, "step"], [0.6401, 0.0, "step"], [0.78, 1.0, "inOutSine"], [0.7801, -1, "step"]]
+    },
+    "trident_plant": {
+      "comment": "Plant: the butt set down on the ground out in front with a thump, the shaft upright and the prongs high; held a moment; then lifted back into the hold.",
+      "length": 2.6,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.15, "pos": [0.3, -0.42, -0.95], "tip": [-0.03, 1, 0.04], "edge": [0.98, 0, 0.2], "ease": "inOutCubic"},
+        {"t": 0.21, "pos": [0.3, -0.51, -0.95], "tip": [-0.03, 1, 0.04], "edge": [0.98, 0, 0.2], "ease": "inQuart"},
+        {"t": 0.3, "pos": [0.3, -0.48, -0.95], "tip": [-0.04, 1, 0.03], "edge": [0.98, 0, 0.2], "ease": "outSine"},
+        {"t": 0.78, "pos": [0.3, -0.48, -0.95], "tip": [-0.03, 1, 0.04], "edge": [0.98, 0, 0.2], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ]
+    },
+    "trident_spin": {
+      "comment": "Spin: raised in front and spun round its middle like a wheel, two turns, then back to the hold (the left hand lets go).",
+      "length": 2.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.1, "pos": [0.28, -0.12, -0.95], "tip": [0, 1, 0.14], "edge": [1, 0, 0], "ease": "inOutCubic"},
+        {"t": 0.18, "pos": [0.28, -0.11, -0.95], "tip": [-0.99, 0, 0.14], "edge": [0, 1, 0], "ease": "inSine"},
+        {"t": 0.26, "pos": [0.28, -0.11, -0.95], "tip": [0, -0.99, 0.14], "edge": [-1, 0, 0], "ease": "linear"},
+        {"t": 0.34, "pos": [0.28, -0.11, -0.95], "tip": [0.99, 0, 0.14], "edge": [0, -1, 0], "ease": "linear"},
+        {"t": 0.42, "pos": [0.28, -0.11, -0.95], "tip": [0, 0.99, 0.14], "edge": [1, 0, 0], "ease": "linear"},
+        {"t": 0.5, "pos": [0.28, -0.11, -0.95], "tip": [-0.99, 0, 0.14], "edge": [0, 1, 0], "ease": "linear"},
+        {"t": 0.58, "pos": [0.28, -0.11, -0.95], "tip": [0, -0.99, 0.14], "edge": [-1, 0, 0], "ease": "linear"},
+        {"t": 0.66, "pos": [0.28, -0.11, -0.95], "tip": [0.99, 0, 0.14], "edge": [0, -1, 0], "ease": "linear"},
+        {"t": 0.76, "pos": [0.28, -0.12, -0.95], "tip": [0, 1, 0.14], "edge": [1, 0, 0], "ease": "outSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "leftFree": [[0.0, 0], [0.08, 1, "outSine"], [0.82, 1], [1.0, 0, "inOutSine"]]
+    }
+  }
+}

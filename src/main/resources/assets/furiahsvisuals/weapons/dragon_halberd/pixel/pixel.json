@@ -1,0 +1,33 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "edge": [6, 7, 8, 9, 10],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20],
+    "energy": [26, 27, 28, 29, 30]
+  },
+  "fixed": [
+    {"name": "ivory", "color": "#E8DCC0", "slots": [41, 42, 43, 44, 45], "glow": false, "alpha": 1}
+  ],
+  "layers": [
+    {"part": "wing", "sprite": "wing.png", "plane": "front", "at": [0, 35, 0], "depth": 1},
+    {"part": "bones", "sprite": "bones.png", "plane": "front", "at": [0, 35, 0], "depth": 2, "depthMap": "bones_depth.png"},
+    {"part": "horn", "sprite": "horn.png", "plane": "front", "at": [-1, 42, 0], "depth": 2, "depthMap": "horn_depth.png"},
+    {"part": "head", "sprite": "head.png", "plane": "front", "at": [-8, 32, 0], "depth": 3},
+    {"part": "eyes", "sprite": "eyes.png", "plane": "front", "at": [-4, 31, 0], "depth": 3},
+    {"part": "throat", "sprite": "throat.png", "plane": "front", "at": [-2, 29, 0], "depth": 1},
+    {"part": "head", "sprite": "brow horn left.png", "plane": "front", "at": [1, 32, -1.5], "depth": 1},
+    {"part": "head", "sprite": "cheek spike left.png", "plane": "front", "at": [1, 29, -1.5], "depth": 1},
+    {"part": "head", "sprite": "brow horn right.png", "plane": "front", "at": [1, 32, 1.5], "depth": 1},
+    {"part": "head", "sprite": "cheek spike right.png", "plane": "front", "at": [1, 29, 1.5], "depth": 1},
+    {"part": "jaw", "sprite": "jaw.png", "plane": "front", "at": [-8, 29, 0], "depth": 3},
+    {"part": "jaw_teeth", "sprite": "jaw teeth.png", "plane": "front", "at": [-6, 28, 0], "depth": 1},
+    {"part": "neck", "sprite": "socket.png", "plane": "front", "at": [-2.5, 26, 0], "depth": 5, "depthMap": "socket_depth.png"},
+    {"part": "claw", "sprite": "claw.png", "plane": "front", "at": [-7.5, 24, 0], "depth": 2, "depthMap": "claw_depth.png"},
+    {"part": "shaft", "sprite": "shaft.png", "plane": "front", "at": [-1.5, 21, 0], "depth": 3},
+    {"part": "fittings", "sprite": "butt.png", "plane": "front", "at": [-1.5, -32, 0], "depth": 3, "depthMap": "butt_depth.png"}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

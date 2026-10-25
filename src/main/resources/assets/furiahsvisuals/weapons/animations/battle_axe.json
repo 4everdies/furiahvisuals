@@ -1,0 +1,109 @@
+{
+  "comment": "Furiah's Visuals: the battle axe's animation set (a one-handed axe held upright at the right, the head up). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). Every clip here is original to this mod.",
+  "clips": {
+    "battle_axe_swing_1": {
+      "comment": "A diagonal chop from high on the right down to the lower left, the head leading.",
+      "length": 0.3,
+      "dir": [-0.65, -0.75],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.18, [0.05, 0.1, 0.06], [22, -10, -18], "outSine"],
+        [0.44, [-0.16, -0.12, -0.1], [-42, 14, 50], "outCubic"],
+        [0.68, [-0.19, -0.15, -0.05], [-46, 18, 56], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "battle_axe_swing_2": {
+      "comment": "A second chop, steeper, from above the head down across to the left.",
+      "length": 0.3,
+      "dir": [-0.45, -0.9],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.18, [0.02, 0.14, 0.07], [30, -4, -10], "outSine"],
+        [0.44, [-0.1, -0.14, -0.12], [-56, 8, 32], "outCubic"],
+        [0.68, [-0.12, -0.17, -0.06], [-60, 10, 36], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "battle_axe_swing_3": {
+      "comment": "A backhand hook: swung flat from the left back across to the right, the beard hooking.",
+      "length": 0.3,
+      "dir": [1, 0.05],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [-0.14, -0.02, 0.02], [-20, 36, 50], "outSine"],
+        [0.44, [0.08, 0.0, -0.1], [-24, -30, -48], "outCubic"],
+        [0.68, [0.1, -0.02, -0.05], [-26, -36, -54], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "battle_axe_quick_swing_1": {
+      "comment": "Rapid clicks: a short chop down to the left.",
+      "length": 0.3,
+      "dir": [-0.6, -0.8],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.09, -0.08, -0.06], [-30, 9, 28], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "battle_axe_quick_swing_2": {
+      "comment": "Rapid clicks: a short backhand flick to the right.",
+      "length": 0.3,
+      "dir": [0.9, 0.1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [0.06, 0.0, -0.05], [-14, -18, -26], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "battle_axe_crit": {
+      "comment": "A critical hit: raised high behind the shoulder and brought straight down in a heavy chop.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.2, [0.03, 0.18, 0.1], [40, -2, -6], "outSine"],
+        [0.46, [-0.05, -0.16, -0.18], [-72, 6, 10], "outQuart"],
+        [0.7, [-0.04, -0.14, -0.1], [-62, 5, 8], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "battle_axe_guard": {
+      "comment": "Blocking: the haft held upright in front, the head forward over the fist, its bit toward the blow.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.14, -0.38, -0.58], "tip": [-0.12, 0.8, -0.58], "edge": [0.05, -0.58, -0.8], "ease": "outCubic"}
+      ]
+    },
+    "battle_axe_dual_guard": {
+      "comment": "Blocking with an axe in each hand: the hafts crossed in an X, the heads up (the left hand's is this, mirrored).",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.17, -0.3, -0.6], "tip": [-0.55, 0.82, -0.14], "edge": [0.1, 0.1, -0.99], "ease": "outCubic"}
+      ]
+    },
+    "battle_axe_draw": {
+      "comment": "The draw: up from the hip, flipped once end over end by the haft, and caught in the hold.",
+      "length": 0.6,
+      "weaponSpace": "view",
+      "right": [
+        [0.0, [0.03, -0.5, 0.12], [-50, 10, 26]],
+        [0.3, [0.0, -0.03, 0.0], [6, 2, 0], "outCubic"],
+        [0.66, [0.0, -0.05, 0.0], [-6, 2, 0], "inOutSine"],
+        [0.8, [0.0, 0.01, 0.0], [2, 0, 0], "outSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [0, 0, 0], [0, 0, 0]],
+        [0.48, [0, 0.14, 0.02], [180, 0, 0], "outSine"],
+        [0.66, [0, 0, 0], [360, 0, 0], "inSine"],
+        [1.0, [0, 0, 0], [360, 0, 0]]
+      ],
+      "events": [[0.3, "release"], [0.66, "catch"]]
+    }
+  }
+}

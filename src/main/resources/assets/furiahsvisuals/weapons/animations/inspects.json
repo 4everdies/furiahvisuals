@@ -1,0 +1,160 @@
+{
+  "comment": "Furiah's Visuals: the shared inspect library for 3D weapons (a weapon's own and its animation set's inspects of the same name come first). right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise). weapon: the weapon in the fist (x edge, y handle, z flat), or in view space with weaponSpace view. Turns of more than 90 degrees are split into keys of at most 90. Every clip here is original to this mod.",
+  "clips": {
+    "inspect_look_over": {
+      "comment": "Brought closer and slowly turned to show one flat, then the other: the finish catches the light.",
+      "length": 3.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.16, "pos": [0.16, -0.24, -0.6], "tip": [-0.95, 0.24, -0.2], "edge": [0, -1, 0], "ease": "inOutCubic"},
+        {"t": 0.4, "pos": [0.14, -0.22, -0.58], "tip": [-0.86, 0.34, 0.3], "edge": [0, -1, 0.35], "ease": "inOutSine"},
+        {"t": 0.56, "pos": [0.14, -0.22, -0.58], "tip": [-0.93, 0.28, -0.1], "edge": [0, -1, 0.1], "ease": "inOutSine"},
+        {"t": 0.8, "pos": [0.15, -0.23, -0.6], "tip": [-0.9, 0.2, -0.38], "edge": [0, -1, -0.2], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.42, [0, 0, 0], [0, 0, 0]],
+        [0.53, [0, 0, 0], [0, 90, 0], "inOutSine"],
+        [0.64, [0, 0, 0], [0, 180, 0], "inOutSine"],
+        [0.86, [0, 0, 0], [0, 180, 0], "inOutSine"],
+        [0.93, [0, 0, 0], [0, 90, 0], "inSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "outSine"]
+      ],
+      "leftShow": [[0.0, 0], [0.12, 1, "outCubic"], [0.88, 1], [1.0, 0, "inCubic"]]
+    },
+    "inspect_flip_present": {
+      "comment": "From a relaxed low hold it flips toward the camera, sideways and huge, spins back, and is held upright at the right like a trophy, swaying gently; then back to the hold.",
+      "length": 2.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.07, [0.03, -0.07, 0.02], [-8, -4, 4], "inOutSine"],
+        {"t": 0.13, "pos": [0.2, -0.16, -0.46], "tip": [-0.3, 0.55, 0.78], "edge": [0, -0.8, 0.55], "ease": "inCubic"},
+        {"t": 0.2, "pos": [0.1, -0.12, -0.36], "tip": [-1, 0.12, 0.05], "edge": [0, -1, 0.1], "ease": "outCubic"},
+        {"t": 0.32, "pos": [0.3, -0.24, -0.66], "tip": [0.25, 0.9, 0.35], "edge": [-1, 0.2, 0.2], "ease": "inOutCubic"},
+        {"t": 0.44, "pos": [0.38, -0.3, -0.8], "tip": [-0.08, 1, 0.05], "edge": [-1, -0.05, -0.25], "ease": "outSine"},
+        {"t": 0.58, "pos": [0.38, -0.29, -0.8], "tip": [-0.02, 1, 0.1], "edge": [-1, 0, -0.18], "ease": "inOutSine"},
+        {"t": 0.72, "pos": [0.39, -0.3, -0.8], "tip": [-0.13, 1, 0.02], "edge": [-1, -0.1, -0.3], "ease": "inOutSine"},
+        {"t": 0.84, "pos": [0.38, -0.31, -0.8], "tip": [-0.06, 1, 0.06], "edge": [-1, -0.04, -0.22], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ]
+    },
+    "inspect_twirl": {
+      "comment": "One and a half turns spun in the fingers about the grip.",
+      "length": 1.5,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [-0.06, 0.06, 0.06], [6, 10, 6], "inOutSine"],
+        [0.7, [-0.06, 0.07, 0.06], [8, 12, 8], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0, 0, 0], [0, 0, 0]],
+        [0.22, [0, 0, 0], [0, 0, 90], "inSine"],
+        [0.3, [0, 0, 0], [0, 0, 180], "linear"],
+        [0.38, [0, 0, 0], [0, 0, 270], "linear"],
+        [0.46, [0, 0, 0], [0, 0, 360], "linear"],
+        [0.54, [0, 0, 0], [0, 0, 450], "linear"],
+        [0.66, [0, 0, 0], [0, 0, 540], "outSine"],
+        [0.8, [0, 0, 0], [0, 0, 630], "inOutSine"],
+        [0.92, [0, 0, 0], [0, 0, 720], "outSine"]
+      ],
+      "leftShow": [[0.0, 0], [0.15, 0.6, "outCubic"], [0.8, 0.6], [1.0, 0, "inCubic"]]
+    },
+    "inspect_toss_catch": {
+      "comment": "Tossed up end over end and caught.",
+      "length": 1.7,
+      "weaponSpace": "view",
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [0.0, -0.05, 0.02], [-10, 0, 0], "inOutSine"],
+        [0.2, [-0.02, 0.06, 0.0], [12, 4, 0], "outCubic"],
+        [0.3, [-0.02, 0.02, 0.0], [4, 4, 0], "inOutSine"],
+        [0.66, [-0.02, 0.0, 0.0], [2, 4, 0], "inOutSine"],
+        [0.72, [-0.02, -0.06, 0.01], [-8, 4, 0], "outCubic"],
+        [0.84, [-0.01, 0.01, 0.0], [2, 2, 0], "outSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.2, [0, 0, 0], [0, 0, 0]],
+        [0.26, [0, 0.13, 0.02], [90, 0, 0], "outSine"],
+        [0.32, [0, 0.23, 0.03], [180, 0, 0], "linear"],
+        [0.39, [0, 0.29, 0.03], [270, 0, 0], "linear"],
+        [0.45, [0, 0.31, 0.03], [360, 0, 0], "linear"],
+        [0.51, [0, 0.29, 0.03], [450, 0, 0], "linear"],
+        [0.58, [0, 0.23, 0.03], [540, 0, 0], "linear"],
+        [0.64, [0, 0.13, 0.02], [630, 0, 0], "linear"],
+        [0.7, [0, 0, 0], [720, 0, 0], "inSine"]
+      ],
+      "events": [[0.2, "release"], [0.7, "catch"]]
+    },
+    "inspect_grip_change": {
+      "comment": "Flipped over into a reverse grip, turned to look at it, and flipped back.",
+      "length": 2.0,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [-0.02, 0.05, 0.03], [8, 6, 0], "inOutSine"],
+        [0.4, [-0.06, 0.02, 0.05], [-10, 18, 14], "inOutSine"],
+        [0.6, [-0.06, 0.03, 0.05], [-6, 22, 18], "inOutSine"],
+        [0.78, [-0.02, 0.05, 0.03], [8, 6, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0, 0, 0], [0, 0, 0]],
+        [0.21, [0, 0, 0], [90, 0, 0], "inSine"],
+        [0.28, [0, 0, 0], [180, 0, 0], "outSine"],
+        [0.66, [0, 0, 0], [180, 0, 0]],
+        [0.73, [0, 0, 0], [90, 0, 0], "inSine"],
+        [0.8, [0, 0, 0], [0, 0, 0], "outSine"]
+      ],
+      "leftShow": [[0.0, 0], [0.2, 0.7, "outCubic"], [0.8, 0.7], [1.0, 0, "inCubic"]]
+    },
+    "inspect_edge_check": {
+      "comment": "The blade turned edge-on toward you; a glint runs along the edge.",
+      "length": 2.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.2, "pos": [0.14, -0.2, -0.56], "tip": [-0.92, 0.36, -0.12], "edge": [0.1, 0.25, 1], "ease": "inOutCubic"},
+        {"t": 0.72, "pos": [0.13, -0.19, -0.55], "tip": [-0.9, 0.4, -0.08], "edge": [0.05, 0.3, 1], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "glint": [[0.0, -1], [0.3, -1, "step"], [0.3001, 0.0, "step"], [0.62, 1.0, "inOutSine"], [0.6201, -1, "step"]],
+      "leftShow": [[0.0, 0], [0.15, 0.8, "outCubic"], [0.85, 0.8], [1.0, 0, "inCubic"]]
+    },
+    "inspect_string_pluck": {
+      "comment": "Bows: the bow raised a little and turned toward you, the drawing hand comes to the string (reveal), draws it back a touch (bend) and lets it go: it shakes (the pluck event); twice, the second softer.",
+      "length": 2.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [-0.06, 0.08, 0.06], [4, 18, -6], "inOutSine"],
+        [0.82, [-0.07, 0.09, 0.06], [5, 20, -6], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "reveal": [[0.0, 0], [0.16, 1, "inOutSine"], [0.78, 1], [0.92, 0, "inOutSine"]],
+      "bend": [[0.0, 0], [0.24, 0], [0.34, 0.09, "inSine"], [0.3401, 0, "step"], [0.52, 0], [0.6, 0.05, "inSine"], [0.6001, 0, "step"], [1.0, 0]],
+      "events": [[0.34, "pluck"], [0.6, "pluck"]]
+    },
+    "inspect_bow_spin": {
+      "comment": "Bows: lifted toward the middle and spun once round its grip (about the bow's own length), then settled back into the hold.",
+      "length": 1.7,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [-0.1, 0.07, 0.05], [2, 12, 0], "inOutSine"],
+        [0.78, [-0.1, 0.08, 0.05], [2, 12, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0, 0, 0], [0, 0, 0]],
+        [0.24, [0, 0, 0], [0, 90, 0], "inSine"],
+        [0.34, [0, 0, 0], [0, 180, 0], "linear"],
+        [0.44, [0, 0, 0], [0, 270, 0], "linear"],
+        [0.58, [0, 0, 0], [0, 360, 0], "outSine"],
+        [1.0, [0, 0, 0], [0, 360, 0]]
+      ]
+    }
+  }
+}

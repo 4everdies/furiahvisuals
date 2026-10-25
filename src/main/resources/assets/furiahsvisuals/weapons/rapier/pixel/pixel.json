@@ -1,0 +1,21 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20]
+  },
+  "fixed": [],
+  "layers": [
+    {"part": "blade", "sprite": "blade.png", "plane": "front", "at": [-1, 31, 0], "depth": 1, "depthMap": "blade_depth.png"},
+    {"part": "hilt", "sprite": "ring.png", "plane": "top", "at": [-2, 1.5, -2.5], "depth": 1},
+    {"part": "hilt", "sprite": "bar.png", "plane": "front", "at": [-3.5, 1, 0], "depth": 3},
+    {"part": "hilt", "sprite": "bow.png", "plane": "front", "at": [1.5, -1, 0], "depth": 1, "depthMap": "bow_depth.png"},
+    {"part": "hilt", "sprite": "sweep front.png", "plane": "front", "at": [-3.5, 1, 2], "depth": 1},
+    {"part": "hilt", "sprite": "sweep back.png", "plane": "front", "at": [-3.5, 1, -2], "depth": 1},
+    {"part": "grip", "sprite": "grip.png", "plane": "front", "at": [-1.5, 0, 0], "depth": 3},
+    {"part": "hilt", "sprite": "pommel.png", "plane": "front", "at": [-1.5, -5, 0], "depth": 3}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

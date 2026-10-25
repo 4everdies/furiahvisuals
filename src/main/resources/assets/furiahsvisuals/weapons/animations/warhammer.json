@@ -1,0 +1,137 @@
+{
+  "comment": "Furiah's Visuals: the warhammer's animation set (two hands; it rests on the right shoulder, the head behind it, leaving the view at the top right). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). The left fist stays on the haft. Every clip here is original to this mod.",
+  "clips": {
+    "warhammer_swing_1": {
+      "comment": "A heavy overhead smash: heaved off the shoulder, over, and slammed down in front.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.18, [0.0, 0.12, 0.06], [18, -4, -4], "outSine"],
+        [0.46, [-0.1, -0.14, -0.22], [-126, 6, 4], "outQuart"],
+        [0.7, [-0.1, -0.17, -0.17], [-132, 8, 6], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "warhammer_swing_2": {
+      "comment": "A sideways swing from right to left, the head sweeping round level at chest height.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [0.1, 0.02, 0.05], [-56, -36, -44], "outSine"],
+        [0.46, [-0.34, -0.06, -0.16], [-82, 74, 44], "outCubic"],
+        [0.7, [-0.37, -0.08, -0.1], [-84, 80, 48], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "warhammer_swing_3": {
+      "comment": "A sideways swing back from the left: the head brought across low and up to the right.",
+      "length": 0.3,
+      "dir": [1, 0.3],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [-0.2, -0.06, 0.02], [-70, 50, 36], "outSine"],
+        [0.46, [0.08, -0.02, -0.18], [-76, -40, -30], "outCubic"],
+        [0.7, [0.1, -0.01, -0.12], [-72, -46, -34], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "warhammer_quick_swing_1": {
+      "comment": "Rapid clicks: a short smash down.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.06, -0.08, -0.11], [-68, 4, 4], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "warhammer_quick_swing_2": {
+      "comment": "Rapid clicks: a short swing to the left.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.16, -0.04, -0.09], [-54, 38, 22], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "warhammer_crit": {
+      "comment": "A critical hit: heaved high over the head and brought down in a crushing smash.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.22, [0.02, 0.18, 0.08], [30, -6, -6], "outSine"],
+        [0.48, [-0.1, -0.2, -0.26], [-138, 6, 4], "outQuart"],
+        [0.72, [-0.1, -0.22, -0.22], [-140, 6, 4], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "warhammer_guard": {
+      "comment": "Blocking: the haft brought off the shoulder and held across the body, the head high on the left.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.22, -0.3, -0.6], "tip": [-0.72, 0.66, -0.2], "edge": [0.3, 0.04, -0.953], "ease": "outCubic"}
+      ]
+    },
+    "warhammer_draw": {
+      "comment": "The draw: swung up from low at the side onto the right shoulder, settling with a small bounce.",
+      "length": 0.6,
+      "right": [
+        [0.0, [0.16, -0.55, 0.16], [-46, 12, -22]],
+        [0.5, [0.0, 0.05, 0.02], [-6, 0, 2], "outCubic"],
+        [0.72, [0.0, -0.025, 0.0], [3, 0, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "warhammer_ground_tap": {
+      "comment": "Ground tap: taken off the shoulder and held out in front, the striking face down, and tapped on the ground twice, a small puff of dust each time; then shouldered again.",
+      "length": 2.8,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.18, "pos": [0.25, -0.33, -0.45], "tip": [-0.12, -0.15, -0.98], "edge": [0.018, -0.989, 0.149], "ease": "inOutCubic"},
+        {"t": 0.28, "pos": [0.25, -0.29, -0.45], "tip": [-0.12, -0.15, -0.98], "edge": [0.018, -0.989, 0.149], "ease": "outSine"},
+        {"t": 0.36, "pos": [0.25, -0.42, -0.45], "tip": [-0.12, -0.15, -0.98], "edge": [0.018, -0.989, 0.149], "ease": "inQuart"},
+        {"t": 0.48, "pos": [0.25, -0.29, -0.45], "tip": [-0.12, -0.15, -0.98], "edge": [0.018, -0.989, 0.149], "ease": "outSine"},
+        {"t": 0.56, "pos": [0.25, -0.42, -0.45], "tip": [-0.12, -0.15, -0.98], "edge": [0.018, -0.989, 0.149], "ease": "inQuart"},
+        {"t": 0.78, "pos": [0.25, -0.33, -0.45], "tip": [-0.12, -0.15, -0.98], "edge": [0.018, -0.989, 0.149], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "events": [[0.36, "dust"], [0.56, "dust"]]
+    },
+    "warhammer_shoulder_bounce": {
+      "comment": "Shoulder bounce: bounced on the shoulder twice, the head lifting and dropping back; settled again.",
+      "length": 2.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.01, 0.06, 0.01], [-8, 2, 2], "outSine"],
+        [0.26, [0.0, -0.02, 0.0], [4, 0, 0], "inQuart"],
+        [0.42, [0.01, 0.07, 0.01], [-10, 2, 2], "outSine"],
+        [0.54, [0.0, -0.025, 0.0], [5, 0, 0], "inQuart"],
+        [0.7, [0.0, 0.01, 0.0], [-2, 0, 0], "outSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "warhammer_look_over": {
+      "comment": "Look over: brought down in front, the head before you, turned to show the striking face and then the spike, and shouldered again.",
+      "length": 3.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.18, "pos": [0.28, -0.42, -0.55], "tip": [-0.5, 0.8, -0.33], "edge": [0.86, 0.5, 0.05], "ease": "inOutCubic"},
+        {"t": 0.82, "pos": [0.27, -0.41, -0.55], "tip": [-0.49, 0.81, -0.33], "edge": [0.86, 0.5, 0.05], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [0, 0, 0], [0, 0, 0]],
+        [0.44, [0, 0, 0], [0, 70, 0], "inOutSine"],
+        [0.58, [0, 0, 0], [0, 0, 0], "inOutSine"],
+        [0.72, [0, 0, 0], [0, -70, 0], "inOutSine"],
+        [0.84, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    }
+  }
+}

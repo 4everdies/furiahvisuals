@@ -1,0 +1,41 @@
+{
+  "comment": "Furiah's Visuals: the Rune Blade's own clips (its swings and guard are the saber set's). reveal: the runes lit along the blade (0 none, 1 all; outside 0..1: all lit). flare: the runes and the gem flaring. leftAlong: the empty left fist on the blade's flat, from the guard toward the point. parts: gem turns about its own axis (on top of its slow idle turn). Every clip here is original to this mod.",
+  "clips": {
+    "rune_blade_rune_awakening": {
+      "comment": "Rune awakening: the sword is brought level across the view and its runes go dark; the left fist presses the flat by the guard and slides toward the point, the runes lighting one by one behind it; at the end they flare, and the sword returns to the hold.",
+      "length": 3.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.14, "pos": [0.34, -0.24, -0.7], "tip": [-0.95, 0.24, -0.18], "edge": [0, -1, 0], "ease": "inOutCubic"},
+        {"t": 0.72, "pos": [0.33, -0.23, -0.7], "tip": [-0.95, 0.26, -0.16], "edge": [0, -1, 0], "ease": "inOutSine"},
+        {"t": 0.78, "pos": [0.34, -0.21, -0.7], "tip": [-0.94, 0.3, -0.16], "edge": [0, -1, 0], "ease": "outSine"},
+        {"t": 0.86, "pos": [0.34, -0.24, -0.7], "tip": [-0.95, 0.24, -0.18], "edge": [0, -1, 0], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "leftShow": [[0.0, 0], [0.12, 1, "outCubic"], [0.84, 1], [0.95, 0, "inCubic"]],
+      "leftAlong": {
+        "from": [0, 0.09, 0],
+        "to": [0, 0.52, 0],
+        "along": [[0.0, 0], [0.22, 0], [0.7, 1, "inOutSine"]],
+        "hold": [[0.0, 0], [0.14, 0], [0.22, 1, "outCubic"], [0.72, 1], [0.8, 0, "inCubic"]]
+      },
+      "reveal": [[0.0, -1], [0.12, -1, "step"], [0.1201, 0.0, "step"], [0.22, 0.0], [0.7, 0.98, "inOutSine"], [0.74, 1.0], [0.8, 1.0],
+        [0.8001, -1, "step"]],
+      "flare": [[0.0, 0], [0.7, 0], [0.76, 1, "outSine"], [0.9, 0, "inOutSine"]]
+    },
+    "rune_blade_gem_spin": {
+      "comment": "Gem spin: the sword is turned point down and its hilt raised, the ring pommel up beside the fist; the floating gem spins up, flaring, then slows back to its idle turn.",
+      "length": 2.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.18, "pos": [0.24, -0.24, -0.6], "tip": [0.22, -0.7, -0.68], "edge": [-0.95, -0.12, -0.28], "ease": "inOutCubic"},
+        {"t": 0.82, "pos": [0.24, -0.23, -0.6], "tip": [0.2, -0.71, -0.68], "edge": [-0.95, -0.1, -0.29], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "parts": {
+        "gem": [[0.0, 0], [0.18, 0], [0.4, 360, "inSine"], [0.62, 900, "linear"], [0.82, 1080, "outSine"]]
+      },
+      "flare": [[0.0, 0], [0.2, 0], [0.4, 1, "outSine"], [0.66, 1], [0.84, 0, "inOutSine"]]
+    }
+  }
+}

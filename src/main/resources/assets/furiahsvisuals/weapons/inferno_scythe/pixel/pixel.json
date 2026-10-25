@@ -1,0 +1,33 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "edge": [6, 7, 8, 9, 10],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20],
+    "energy": [26, 27, 28, 29, 30]
+  },
+  "fixed": [
+    {"name": "gold", "color": "#C9A24A", "slots": [41, 42, 43, 44, 45], "glow": false, "alpha": 1}
+  ],
+  "layers": [
+    {"part": "blade", "sprite": "blade.png", "plane": "front", "at": [-28.5, 32, 0], "depth": 1, "depthMap": "blade_depth.png"},
+    {"part": "horns", "sprite": "horns.png", "plane": "front", "at": [-4.5, 37, 0], "depth": 2, "depthMap": "horns_depth.png"},
+    {"part": "core", "sprite": "core.png", "plane": "front", "at": [-1.5, 35, 0], "depth": 3},
+    {"part": "head", "sprite": "cup.png", "plane": "front", "at": [-2.5, 33, 0], "depth": 4},
+    {"part": "head", "sprite": "head.png", "plane": "front", "at": [-2.5, 32, 0], "depth": 3, "depthMap": "head_depth.png"},
+    {"part": "shaft", "sprite": "shaft.png", "plane": "front", "at": [-1.5, 28, 0], "depth": 3},
+    {"part": "grip", "sprite": "grip right.png", "plane": "front", "at": [-1.5, 2, 0], "depth": 3},
+    {"part": "grip", "sprite": "grip left.png", "plane": "front", "at": [-1.5, -14, 0], "depth": 3},
+    {"part": "bands", "sprite": "band 28.png", "plane": "front", "at": [-1.5, 28, 0], "depth": 3},
+    {"part": "bands", "sprite": "band 3.png", "plane": "front", "at": [-1.5, 3, 0], "depth": 3},
+    {"part": "bands", "sprite": "band -2.png", "plane": "front", "at": [-1.5, -2, 0], "depth": 3},
+    {"part": "bands", "sprite": "band -13.png", "plane": "front", "at": [-1.5, -13, 0], "depth": 3},
+    {"part": "bands", "sprite": "band -19.png", "plane": "front", "at": [-1.5, -19, 0], "depth": 3},
+    {"part": "bands", "sprite": "band -29.png", "plane": "front", "at": [-1.5, -29, 0], "depth": 3},
+    {"part": "shaft", "sprite": "collar.png", "plane": "front", "at": [-1.5, -30, 0], "depth": 3},
+    {"part": "spike", "sprite": "spike.png", "plane": "front", "at": [-1.5, -32, 0], "depth": 3, "depthMap": "spike_depth.png"}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

@@ -1,0 +1,38 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20],
+    "energy": [26, 27, 28, 29, 30]
+  },
+  "fixed": [
+    {"name": "pupil", "color": "#160709", "slots": [41, 42, 43, 44, 45], "glow": false, "alpha": 1}
+  ],
+  "layers": [
+    {"part": "metal", "sprite": "ferrule.png", "plane": "front", "at": [-1.5, -21, 0], "depth": 3},
+    {"part": "metal", "sprite": "ferrule point.png", "plane": "front", "at": [-0.5, -23, 0], "depth": 1},
+    {"part": "staff", "sprite": "shaft.png", "plane": "front", "at": [-1.5, 28, 0], "depth": 3},
+    {"part": "grip", "sprite": "grip.png", "plane": "front", "at": [-1.5, 3, 0], "depth": 3},
+    {"part": "metal", "sprite": "band grip top.png", "plane": "front", "at": [-2.5, 4, 0], "depth": 5},
+    {"part": "metal", "sprite": "band grip bottom.png", "plane": "front", "at": [-2.5, -19, 0], "depth": 5},
+    {"part": "metal", "sprite": "band low.png", "plane": "front", "at": [-1.5, 13, 0], "depth": 4},
+    {"part": "metal", "sprite": "band high.png", "plane": "front", "at": [-1.5, 26, 0], "depth": 4},
+    {"part": "metal", "sprite": "collar.png", "plane": "front", "at": [-1.5, 30, 0], "depth": 3},
+    {"part": "metal", "sprite": "cup.png", "plane": "front", "at": [-2.5, 31, 0], "depth": 3},
+    {"part": "metal", "sprite": "lip.png", "plane": "front", "at": [-3, 32, 0], "depth": 3},
+    {"part": "claws", "sprite": "claws.png", "plane": "front", "at": [-5, 40, 0], "depth": 1},
+    {"part": "metal", "sprite": "claw points.png", "plane": "front", "at": [-2, 40, 0], "depth": 1},
+    {"part": "metal", "sprite": "claw sleeves.png", "plane": "front", "at": [-3, 33, 0], "depth": 2},
+    {"part": "eye", "sprite": "gem.png", "plane": "front", "at": [-3, 39, 0], "depth": 2},
+    {"part": "iris", "sprite": "iris front.png", "plane": "front", "at": [-2, 38, 1.5], "depth": 1},
+    {"part": "iris", "sprite": "iris back.png", "plane": "front", "at": [-2, 38, -1.5], "depth": 1},
+    {"part": "pupil", "sprite": "pupil.png", "plane": "front", "at": [-1, 37, 2.5], "depth": 1},
+    {"part": "lid_upper", "sprite": "lid upper front.png", "plane": "front", "at": [-3, 41, 2], "depth": 1},
+    {"part": "lid_upper", "sprite": "lid upper back.png", "plane": "front", "at": [-3, 41, -2], "depth": 1},
+    {"part": "lid_lower", "sprite": "lid lower front.png", "plane": "front", "at": [-3, 34, 2], "depth": 1},
+    {"part": "lid_lower", "sprite": "lid lower back.png", "plane": "front", "at": [-3, 34, -2], "depth": 1}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

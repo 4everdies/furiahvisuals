@@ -5,9 +5,9 @@
 
 **high-end visuals for 1.8.9 • remapped to Forge**
 
-[![Stars](https://img.shields.io/github/stars/4everdies/furiahvisuals?style=for-the-badge&color=7891FF)](https://github.com/YOUR_USERNAME/furiahvisuals/stargazers)
-[![Forks](https://img.shields.io/github/forks/4everdies/furiahvisuals?style=for-the-badge&color=7891FF)](https://github.com/YOUR_USERNAME/furiahvisuals/network/members)
-[![Issues](https://img.shields.io/github/issues/4everdies/furiahvisuals?style=for-the-badge&color=7891FF)](https://github.com/YOUR_USERNAME/furiahvisuals/issues)
+[![Stars](https://img.shields.io/github/stars/4everdies/furiahvisuals?style=for-the-badge&color=7891FF)](https://github.com/4everdies/furiahvisuals/stargazers)
+[![Forks](https://img.shields.io/github/forks/4everdies/furiahvisuals?style=for-the-badge&color=7891FF)](https://github.com/4everdies/furiahvisuals/network/members)
+[![Issues](https://img.shields.io/github/issues/4everdies/furiahvisuals?style=for-the-badge&color=7891FF)](https://github.com/4everdies/furiahvisuals/issues)
 
 *make sure to drop a star ⭐️*
 <img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=header&fontSize=70&fontColor=FFFFFF&animation=fadeIn&theme=tokyonight" width="100%" />

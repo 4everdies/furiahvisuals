@@ -1,0 +1,137 @@
+{
+  "comment": "Furiah's Visuals: the Crystal Staff's animation set (a long staff held at its middle, the crystal at the upper right). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). weapon: the staff turned in the hand, about the grip. parts: extra turns of the crystal and the shards round their orbits (whole turns by the end). flare: the crystal's glow. Every clip here is original to this mod.",
+  "clips": {
+    "crystal_staff_swing_1": {
+      "comment": "A thrust: the head driven forward at the target.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.03, -0.03, 0.08], [10, 0, 0], "outSine"],
+        [0.38, [-0.08, 0.04, -0.3], [-40, 10, 0], "outQuart"],
+        [0.62, [-0.06, 0.03, -0.18], [-30, 8, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "crystal_staff_swing_2": {
+      "comment": "A sweeping strike from right to left, the head leading.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [0.08, 0.02, 0.02], [-10, -20, -28], "outSine"],
+        [0.42, [-0.2, -0.02, -0.08], [-22, 34, 46], "outCubic"],
+        [0.64, [-0.23, -0.04, -0.04], [-24, 38, 52], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "crystal_staff_swing_3": {
+      "comment": "A rising sweep back from the lower left up to the right.",
+      "length": 0.3,
+      "dir": [0.8, 0.5],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [-0.08, -0.08, 0.0], [-16, 16, 40], "outSine"],
+        [0.42, [0.1, 0.08, -0.08], [8, -22, -28], "outCubic"],
+        [0.66, [0.12, 0.1, -0.02], [10, -26, -32], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "crystal_staff_quick_swing_1": {
+      "comment": "Rapid clicks: a short jab of the head.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.04, 0.02, -0.18], [-24, 6, 0], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "crystal_staff_quick_swing_2": {
+      "comment": "Rapid clicks: a short sweep to the left.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.1, -0.02, -0.05], [-12, 18, 26], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "crystal_staff_crit": {
+      "comment": "A critical hit: the head raised high and brought down in a smash.",
+      "length": 0.3,
+      "dir": [-0.1, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.18, [0.0, 0.1, 0.06], [26, -4, -6], "outSine"],
+        [0.42, [-0.08, -0.14, -0.1], [-56, 8, 10], "outQuart"],
+        [0.64, [-0.09, -0.15, -0.06], [-58, 8, 10], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "flare": [[0.0, 0], [0.4, 0], [0.48, 1, "outCubic"], [1.0, 0, "inOutSine"]]
+    },
+    "crystal_staff_guard": {
+      "comment": "Blocking: the staff held level across the view, quarterstaff-style.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.16, -0.26, -0.64], "tip": [-1, 0.14, -0.1], "edge": [0, 0.3, -0.95], "ease": "outCubic"}
+      ]
+    },
+    "crystal_staff_dual_guard": {
+      "comment": "Blocking with a staff in each hand: the two crossed in an X (the left hand's is this, mirrored).",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.17, -0.32, -0.66], "tip": [-0.58, 0.8, -0.14], "edge": [-0.8, -0.52, -0.3], "ease": "outCubic"}
+      ]
+    },
+    "crystal_staff_draw": {
+      "comment": "The draw: the staff swung up into the hand, the crystal waking with a flare that settles.",
+      "length": 0.8,
+      "right": [
+        [0.0, [0.02, -0.55, 0.15], [-50, 10, 26]],
+        [0.5, [0.0, 0.02, 0.0], [4, 0, -4], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "flare": [[0.0, 0], [0.35, 0], [0.5, 1, "outCubic"], [1.0, 0, "inOutSine"]]
+    },
+    "crystal_staff_staff_spin": {
+      "comment": "Staff spin: brought in front and spun about its middle like a wheel, twice round, and caught back into the hold.",
+      "length": 2.0,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [-0.12, 0.08, -0.04], [0, 0, 0], "inOutSine"],
+        [0.82, [-0.12, 0.08, -0.04], [0, 0, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0, 0, 0], [0, 0, 0]],
+        [0.24, [0, 0, 0], [0, 0, 110], "inSine"],
+        [0.64, [0, 0, 0], [0, 0, 610], "linear"],
+        [0.8, [0, 0, 0], [0, 0, 720], "outSine"]
+      ],
+      "flare": [[0.0, 0], [0.2, 0], [0.4, 0.5, "inOutSine"], [0.7, 0.5], [0.9, 0, "inOutSine"]]
+    },
+    "crystal_staff_crystal_flare": {
+      "comment": "Crystal flare: the head brought close; the crystal pulses, brighter each time, and the shards race round it, then settle.",
+      "length": 2.6,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.14, "pos": [0.26, -0.48, -0.5], "tip": [0.0, 0.97, -0.25], "edge": [0.97, 0.0, 0.25], "ease": "inOutCubic"},
+        {"t": 0.84, "pos": [0.26, -0.47, -0.5], "tip": [0.02, 0.97, -0.24], "edge": [0.97, 0.0, 0.25], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "flare": [[0.0, 0], [0.18, 0], [0.26, 0.8, "outCubic"], [0.34, 0.35, "inOutSine"], [0.42, 0.9, "inOutSine"], [0.5, 0.4, "inOutSine"],
+        [0.58, 1, "inOutSine"], [0.68, 0.55, "inOutSine"], [0.76, 1, "inOutSine"], [0.88, 0, "inOutSine"]],
+      "parts": {
+        "crystal": [[0.0, 0, 0, 1], [0.16, 0, 0, 1], [0.88, 720, 0, 1, "inOutSine"]],
+        "shard_1": [[0.0, 0, 0, 1], [0.16, 0, 0, 1], [0.88, 1080, 0, 1, "inOutSine"]],
+        "shard_2": [[0.0, 0, 0, 1], [0.16, 0, 0, 1], [0.88, -1080, 0, 1, "inOutSine"]],
+        "shard_3": [[0.0, 0, 0, 1], [0.16, 0, 0, 1], [0.88, 1080, 0, 1, "inOutSine"]],
+        "shard_4": [[0.0, 0, 0, 1], [0.16, 0, 0, 1], [0.88, -1080, 0, 1, "inOutSine"]]
+      }
+    }
+  }
+}

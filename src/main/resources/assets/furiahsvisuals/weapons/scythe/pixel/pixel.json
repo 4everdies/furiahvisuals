@@ -1,0 +1,25 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "edge": [6, 7, 8, 9, 10],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20],
+    "accent": [21, 22, 23, 24, 25]
+  },
+  "fixed": [],
+  "layers": [
+    {"part": "blade", "sprite": "blade.png", "plane": "front", "at": [-28.5, 31, 0], "depth": 1, "depthMap": "blade_depth.png"},
+    {"part": "socket", "sprite": "socket.png", "plane": "front", "at": [-1.5, 31, 0], "depth": 3},
+    {"part": "wrap", "sprite": "wrap.png", "plane": "front", "at": [-1.5, 27, 0], "depth": 3},
+    {"part": "shaft", "sprite": "shaft.png", "plane": "front", "at": [-1.5, 25, 0], "depth": 3},
+    {"part": "iron", "sprite": "ring_high.png", "plane": "front", "at": [-1.5, 4, 0], "depth": 3},
+    {"part": "iron", "sprite": "ring_nib.png", "plane": "front", "at": [-1.5, -9, 0], "depth": 3},
+    {"part": "iron", "sprite": "ring_low.png", "plane": "front", "at": [-1.5, -20, 0], "depth": 3},
+    {"part": "iron", "sprite": "cap.png", "plane": "front", "at": [-1.5, -29, 0], "depth": 3},
+    {"part": "nib", "sprite": "nib.png", "plane": "front", "at": [1.5, -9, 0], "depth": 2},
+    {"part": "iron", "sprite": "knob.png", "plane": "front", "at": [3.5, -9, 0], "depth": 2}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

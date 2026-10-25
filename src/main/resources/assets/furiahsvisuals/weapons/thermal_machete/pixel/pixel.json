@@ -1,0 +1,22 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "edge": [6, 7, 8, 9, 10],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20],
+    "energy": [26, 27, 28, 29, 30]
+  },
+  "fixed": [],
+  "layers": [
+    {"part": "blade", "sprite": "blade.png", "plane": "front", "at": [-1.5, 15, 0], "depth": 1, "depthMap": "blade_depth.png"},
+    {"part": "fins", "sprite": "fins.png", "plane": "front", "at": [-2.5, 10, 0], "depth": 3},
+    {"part": "metal", "sprite": "housing.png", "plane": "front", "at": [-1.5, 2, 0], "depth": 3},
+    {"part": "glow", "sprite": "vent.png", "plane": "front", "at": [-0.5, 2, 0], "depth": 3},
+    {"part": "metal", "sprite": "guard.png", "plane": "front", "at": [-1.5, 0, 0], "depth": 3},
+    {"part": "grip", "sprite": "grip.png", "plane": "front", "at": [-1.5, -1, 0], "depth": 3},
+    {"part": "metal", "sprite": "butt.png", "plane": "front", "at": [-1.5, -7, 0], "depth": 3}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

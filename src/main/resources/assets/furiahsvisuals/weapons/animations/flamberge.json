@@ -1,0 +1,140 @@
+{
+  "comment": "Furiah's Visuals: the flamberge's animation set (two hands; it rests on the right shoulder, the blade leaving the view at the top right). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}); weapon: turns in the fist's frame (x edge, y handle, z flat). The left fist stays on the grip. Every clip here is original to this mod.",
+  "clips": {
+    "flamberge_swing_1": {
+      "comment": "A heavy diagonal chop: heaved off the shoulder and brought down from high on the right to the lower left.",
+      "length": 0.3,
+      "dir": [-0.7, -0.7],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [0.02, 0.08, 0.04], [14, -10, -16], "outSine"],
+        [0.46, [-0.22, -0.12, -0.17], [-98, 30, 40], "outCubic"],
+        [0.7, [-0.25, -0.15, -0.13], [-103, 34, 44], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "flamberge_swing_2": {
+      "comment": "A wide sweep from right to left, the wavy blade level at chest height.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [0.08, 0.0, 0.04], [-52, -32, -42], "outSine"],
+        [0.46, [-0.32, -0.06, -0.16], [-76, 72, 42], "outCubic"],
+        [0.7, [-0.36, -0.08, -0.1], [-80, 80, 47], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "flamberge_swing_3": {
+      "comment": "A heavy chop the other way: over to the left and down across to the lower right.",
+      "length": 0.3,
+      "dir": [0.7, -0.7],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [-0.12, 0.06, 0.02], [10, 16, 26], "outSine"],
+        [0.46, [0.06, -0.14, -0.16], [-96, -26, -34], "outCubic"],
+        [0.7, [0.07, -0.17, -0.12], [-101, -30, -38], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "flamberge_quick_swing_1": {
+      "comment": "Rapid clicks: a short chop.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.06, -0.06, -0.1], [-60, 4, 4], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "flamberge_quick_swing_2": {
+      "comment": "Rapid clicks: a short sweep to the left.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.14, -0.04, -0.08], [-50, 34, 20], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "flamberge_crit": {
+      "comment": "A critical hit: heaved high over the shoulder and smashed straight down with everything behind it.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.2, [0.02, 0.15, 0.07], [26, -6, -6], "outSine"],
+        [0.46, [-0.12, -0.17, -0.22], [-126, 6, 4], "outQuart"],
+        [0.7, [-0.12, -0.19, -0.18], [-129, 6, 4], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "flamberge_guard": {
+      "comment": "Blocking: taken off the shoulder and held upright before you in both hands, the flame-shaped blade rising up the right of the view.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.14, -0.34, -0.62], "tip": [-0.02, 1, 0.06], "edge": [-0.55, 0.05, -0.83], "ease": "outCubic"}
+      ]
+    },
+    "flamberge_draw": {
+      "comment": "The draw: swung up from low at the side, over onto the right shoulder, settling with a small bounce.",
+      "length": 0.6,
+      "right": [
+        [0.0, [0.14, -0.52, 0.14], [-48, 12, -22]],
+        [0.3, [0.08, -0.2, 0.06], [-34, 6, -12], "inSine"],
+        [0.56, [0.0, 0.05, 0.02], [-6, 0, 2], "outSine"],
+        [0.76, [0.0, -0.025, 0.0], [3, 0, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "flamberge_shoulder_rest": {
+      "comment": "Shoulder Rest: heaved up off the shoulder and let settle back onto it, then leaned further back over it, the left hand letting go and the right hanging easy on the grip for a breath or two; then taken up again.",
+      "length": 3.0,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [0.0, 0.08, 0.02], [-9, 2, 2], "inOutSine"],
+        [0.22, [0.0, -0.02, 0.0], [4, -1, 0], "inCubic"],
+        [0.28, [0.0, 0.005, 0.0], [1, 0, 0], "outSine"],
+        [0.42, [0.03, -0.04, 0.04], [15, -6, -4], "inOutSine"],
+        [0.56, [0.03, -0.05, 0.045], [17, -6, -4], "inOutSine"],
+        [0.7, [0.03, -0.04, 0.04], [15, -6, -4], "inOutSine"],
+        [0.86, [0, 0, 0], [0, 0, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0]]
+      ],
+      "leftFree": [[0.0, 0], [0.34, 0], [0.44, 1, "inOutSine"], [0.76, 1], [0.88, 0, "inOutSine"]]
+    },
+    "flamberge_plant_lean": {
+      "comment": "Plant & Lean: taken off the shoulder and planted point down out in front, leaning in toward the middle with its flat to you (so the hooks and the first waves show left of the arm), the left hand letting go and the right resting on the hilt; it is leaned on, breathing, then shouldered again.",
+      "length": 3.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.16, "pos": [0.2, -0.14, -0.95], "tip": [-0.28, -0.955, -0.08], "edge": [0.96, -0.28, 0.02], "ease": "inOutCubic"},
+        {"t": 0.22, "pos": [0.2, -0.16, -0.95], "tip": [-0.28, -0.955, -0.08], "edge": [0.96, -0.28, 0.02], "ease": "outSine"},
+        {"t": 0.48, "pos": [0.2, -0.18, -0.93], "tip": [-0.28, -0.945, -0.15], "edge": [0.96, -0.28, 0.02], "ease": "inOutSine"},
+        {"t": 0.66, "pos": [0.2, -0.17, -0.94], "tip": [-0.28, -0.95, -0.11], "edge": [0.96, -0.28, 0.02], "ease": "inOutSine"},
+        {"t": 0.82, "pos": [0.2, -0.16, -0.95], "tip": [-0.28, -0.955, -0.08], "edge": [0.96, -0.28, 0.02], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "leftFree": [[0.0, 0], [0.14, 1, "inOutSine"], [0.84, 1], [0.97, 0, "inOutSine"]]
+    },
+    "flamberge_look_over": {
+      "comment": "Look Over: brought down level across the view, its flat to you, and slowly rolled one way and the other so the light rolls along the waves; then shouldered again.",
+      "length": 3.6,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.16, "pos": [0.26, -0.3, -0.72], "tip": [-0.96, 0.22, -0.15], "edge": [0, -1, 0], "ease": "inOutCubic"},
+        {"t": 0.84, "pos": [0.25, -0.29, -0.72], "tip": [-0.95, 0.25, -0.14], "edge": [0, -1, 0], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.22, [0, 0, 0], [0, 0, 0]],
+        [0.38, [0, 0, 0], [0, 35, 0], "inOutSine"],
+        [0.56, [0, 0, 0], [0, -35, 0], "inOutSine"],
+        [0.72, [0, 0, 0], [0, 25, 0], "inOutSine"],
+        [0.84, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    }
+  }
+}

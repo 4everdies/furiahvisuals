@@ -1,0 +1,80 @@
+{
+  "comment": "Furiah's Visuals: the bow animation set (the Longbow, and every bow). A bow is held in the left hand: these clips are composed as in a right hand and mirrored, like the left hand's weapon when dual-wielding. right: the bow fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise). weapon: the bow in the fist (x where the arrow flies, y the upper limb, z the arrow's side). The draw and release follow vanilla's own bow and are not clips. For a bow, a clip's reveal curve is how far the drawing hand is on the string (0..1) and its bend curve pulls the string (0..1 of a draw); a pluck event sets the string shaking. Every clip here is original to this mod.",
+  "clips": {
+    "bow_swing_1": {
+      "comment": "A short bash: the bow driven forward and in, the upper limb leading.",
+      "length": 0.3,
+      "dir": [-1, 0.2],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [0.03, 0.02, 0.05], [0, -6, 6], "outSine"],
+        [0.38, [-0.16, 0.06, -0.2], [-8, 20, -14], "outQuart"],
+        [0.65, [-0.09, 0.03, -0.1], [-4, 11, -8], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "bow_swing_2": {
+      "comment": "A rising bash: the bow's lower limb swung up and in.",
+      "length": 0.3,
+      "dir": [-0.3, 1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [0.02, -0.04, 0.03], [-6, -4, 4], "outSine"],
+        [0.38, [-0.08, 0.13, -0.16], [20, 10, -10], "outQuart"],
+        [0.65, [-0.04, 0.07, -0.08], [10, 5, -5], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "bow_quick_swing_1": {
+      "comment": "Rapid clicks: a short jab forward with the bow.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.26, [-0.08, 0.03, -0.14], [-3, 9, -6], "outQuart"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "bow_crit": {
+      "comment": "A critical hit: the bow raised and brought down hard across, the limb leading.",
+      "length": 0.3,
+      "dir": [-0.4, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [0.04, 0.12, 0.08], [16, -10, 10], "outSine"],
+        [0.42, [-0.2, -0.04, -0.26], [-18, 24, -20], "outQuart"],
+        [0.7, [-0.1, -0.02, -0.13], [-9, 12, -10], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "bow_draw": {
+      "comment": "The draw (equip): the bow swings up from the side into the hold.",
+      "length": 0.5,
+      "right": [
+        [0.0, [0.22, -0.62, 0.16], [-34, -16, 50]],
+        [0.6, [0.01, 0.015, 0.0], [3, 1, -3], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "bow_look_over": {
+      "comment": "Look over: brought in and turned to show its side, the curve of the limbs and the string, then turned to show its back, and back to the hold.",
+      "length": 3.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.16, "pos": [0.2, -0.4, -1.0], "tip": [-0.42, 0.9, 0.05], "edge": [0.88, 0.3, -0.36], "ease": "inOutCubic"},
+        {"t": 0.42, "pos": [0.19, -0.39, -0.98], "tip": [-0.36, 0.93, 0.1], "edge": [0.9, 0.24, -0.36], "ease": "inOutSine"},
+        {"t": 0.58, "pos": [0.19, -0.4, -1.0], "tip": [-0.4, 0.91, 0.05], "edge": [0.88, 0.28, -0.38], "ease": "inOutSine"},
+        {"t": 0.82, "pos": [0.2, -0.41, -1.0], "tip": [-0.44, 0.9, 0.02], "edge": [0.86, 0.3, -0.4], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.44, [0, 0, 0], [0, 0, 0]],
+        [0.56, [0, 0, 0], [0, 90, 0], "inOutSine"],
+        [0.8, [0, 0, 0], [0, 90, 0], "inOutSine"],
+        [0.92, [0, 0, 0], [0, 0, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0]]
+      ]
+    }
+  }
+}

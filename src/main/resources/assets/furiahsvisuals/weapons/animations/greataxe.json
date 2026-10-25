@@ -1,0 +1,137 @@
+{
+  "comment": "Furiah's Visuals: the greataxe's animation set (two hands; it rests on the right shoulder, the head behind it, leaving the view at the top right). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). The left fist stays on the haft. Every clip here is original to this mod.",
+  "clips": {
+    "greataxe_swing_1": {
+      "comment": "A heavy overhead chop: heaved off the shoulder, over, and driven down in front.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [0.0, 0.1, 0.05], [16, -6, -4], "outSine"],
+        [0.46, [-0.12, -0.12, -0.2], [-120, 8, 6], "outQuart"],
+        [0.7, [-0.12, -0.15, -0.15], [-126, 10, 8], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greataxe_swing_2": {
+      "comment": "A wide sweep from right to left at chest height, the head leading round.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [0.1, 0.0, 0.05], [-52, -34, -42], "outSine"],
+        [0.46, [-0.32, -0.07, -0.17], [-78, 72, 42], "outCubic"],
+        [0.7, [-0.36, -0.09, -0.11], [-80, 80, 48], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greataxe_swing_3": {
+      "comment": "A diagonal chop from high on the right down to the lower left.",
+      "length": 0.3,
+      "dir": [-0.7, -0.7],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [0.03, 0.07, 0.04], [12, -10, -22], "outSine"],
+        [0.46, [-0.24, -0.13, -0.17], [-98, 32, 42], "outCubic"],
+        [0.7, [-0.26, -0.16, -0.13], [-104, 36, 46], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greataxe_quick_swing_1": {
+      "comment": "Rapid clicks: a short chop down.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.06, -0.07, -0.11], [-64, 4, 4], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greataxe_quick_swing_2": {
+      "comment": "Rapid clicks: a short sweep to the left.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.15, -0.04, -0.09], [-52, 36, 22], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greataxe_crit": {
+      "comment": "A critical hit: heaved high over the head and brought down with everything behind it.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.22, [0.02, 0.16, 0.07], [28, -6, -6], "outSine"],
+        [0.48, [-0.11, -0.18, -0.24], [-132, 6, 4], "outQuart"],
+        [0.72, [-0.11, -0.2, -0.2], [-135, 6, 4], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greataxe_guard": {
+      "comment": "Blocking: the haft brought off the shoulder and held across the body, between you and the blow.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.2, -0.28, -0.6], "tip": [-0.94, 0.32, -0.12], "edge": [0, 0.35, -0.94], "ease": "outCubic"}
+      ]
+    },
+    "greataxe_draw": {
+      "comment": "The draw: hauled up from low at the side and heaved onto the right shoulder, settling with a small bounce.",
+      "length": 0.6,
+      "right": [
+        [0.0, [0.14, -0.5, 0.14], [-40, 10, -20]],
+        [0.5, [0.0, 0.05, 0.02], [-6, 0, 2], "outCubic"],
+        [0.72, [0.0, -0.02, 0.0], [3, 0, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greataxe_shoulder_rest": {
+      "comment": "Shoulder rest: shifted on the shoulder and rocked back a little, the hand easing its grip; settled again.",
+      "length": 2.6,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [0.01, 0.05, 0.02], [-6, 4, 2], "inOutSine"],
+        [0.3, [0.0, -0.015, 0.0], [3, -2, -1], "inOutSine"],
+        [0.5, [0.02, 0.0, 0.03], [8, 6, 4], "inOutSine"],
+        [0.7, [0.02, 0.0, 0.03], [7, 5, 4], "inOutSine"],
+        [0.86, [0.0, -0.01, 0.0], [-2, 0, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greataxe_plant_lean": {
+      "comment": "Plant & lean: taken off the shoulder and its spiked butt driven into the ground out in front, the haft upright and the blades across; the left hand lets go and it is leaned on, the head tipping toward you, breathing; then shouldered again.",
+      "length": 3.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.16, "pos": [0.26, -0.38, -0.85], "tip": [-0.04, 1, 0.03], "edge": [0.99, 0.04, 0.1], "ease": "inOutCubic"},
+        {"t": 0.22, "pos": [0.26, -0.47, -0.85], "tip": [-0.04, 1, 0.03], "edge": [0.99, 0.04, 0.1], "ease": "inQuart"},
+        {"t": 0.3, "pos": [0.26, -0.44, -0.85], "tip": [-0.05, 1, 0.02], "edge": [0.99, 0.05, 0.1], "ease": "outSine"},
+        {"t": 0.5, "pos": [0.27, -0.44, -0.83], "tip": [0.1, 0.97, 0.2], "edge": [0.99, -0.1, 0.01], "ease": "inOutSine"},
+        {"t": 0.66, "pos": [0.27, -0.45, -0.83], "tip": [0.09, 0.97, 0.21], "edge": [0.99, -0.09, 0.0], "ease": "inOutSine"},
+        {"t": 0.82, "pos": [0.26, -0.44, -0.85], "tip": [-0.04, 1, 0.03], "edge": [0.99, 0.04, 0.1], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "leftFree": [[0.0, 0], [0.14, 1, "inOutSine"], [0.84, 1], [0.97, 0, "inOutSine"]]
+    },
+    "greataxe_look_over": {
+      "comment": "Look over: brought down in front, the head before you, slowly turned to show one blade and then the other, and shouldered again.",
+      "length": 3.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.18, "pos": [0.28, -0.4, -0.55], "tip": [-0.5, 0.8, -0.33], "edge": [0.86, 0.5, 0.05], "ease": "inOutCubic"},
+        {"t": 0.82, "pos": [0.27, -0.39, -0.55], "tip": [-0.49, 0.81, -0.33], "edge": [0.86, 0.5, 0.05], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [0, 0, 0], [0, 0, 0]],
+        [0.44, [0, 0, 0], [0, 70, 0], "inOutSine"],
+        [0.58, [0, 0, 0], [0, 0, 0], "inOutSine"],
+        [0.72, [0, 0, 0], [0, -70, 0], "inOutSine"],
+        [0.84, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    }
+  }
+}

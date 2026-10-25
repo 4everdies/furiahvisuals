@@ -1,0 +1,138 @@
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net/' }
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+version = '1.3.5-standalone'
+group = 'meowtils.furiahvisuals'
+archivesBaseName = 'furiahvisuals'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+minecraft {
+    version = '1.8.9-11.15.1.2318-1.8.9'
+    runDir = 'run'
+    mappings = 'stable_22'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+processResources {
+    inputs.property 'version', project.version
+    inputs.property 'mcversion', project.minecraft.version
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'version': project.version, 'mcversion': project.minecraft.version
+    }
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+
+jar {
+    // Keep the final artifact name stable, without version/classifier suffixes.
+    archiveName = 'furiahvisuals.jar'
+    manifest {
+        attributes(
+            'Specification-Title': "Furiah's Visuals",
+            'Specification-Vendor': 'FuriahVisuals standalone project',
+            'Specification-Version': '1',
+            'Implementation-Title': project.name,
+            'Implementation-Version': project.version,
+            'Implementation-Vendor': 'FuriahVisuals standalone project'
+        )
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+// ---------------------------------------------------------------------------
+// Tabela MCP -> SRG
+//
+// O mod acessa campos/metodos privados do Minecraft por reflexao (mcProfiler, timer,
+// entityRenderMap, ...). No runClient eles tem nome MCP, mas num Minecraft normal
+// (mod .jar na pasta mods) o nome real e field_XXXXX_X / func_XXXXX_X. O ForgeGradle
+// nao reobfusca strings, entao geramos aqui a tabela que o hook/Srg.java le em runtime.
+// So entram os nomes que aparecem como string literal no codigo-fonte.
+// ---------------------------------------------------------------------------
+def srgTableDir = new File(buildDir, 'generated/srg')
+
+task generateSrgTable {
+    outputs.dir srgTableDir
+    doLast {
+        srgTableDir.mkdirs()
+        def out = new File(srgTableDir, 'furiah_srg.txt')
+
+        def home = gradle.gradleUserHomeDir
+        def srg = new File(home, "caches/minecraft/net/minecraftforge/forge/${project.minecraft.version}/srgs/mcp-srg.srg")
+        if (!srg.isFile()) {
+            srg = null
+            def root = new File(home, 'caches/minecraft')
+            if (root.isDirectory()) {
+                root.eachFileRecurse { f ->
+                    if (srg == null && f.name == 'mcp-srg.srg') {
+                        srg = f
+                    }
+                }
+            }
+        }
+        if (srg == null) {
+            logger.warn('generateSrgTable: mcp-srg.srg nao encontrado; o jar so funcionara com nomes MCP (runClient). Rode "gradlew setupDecompWorkspace" e compile de novo.')
+            out.text = ''
+            return
+        }
+
+        def wanted = [] as Set
+        fileTree(dir: 'src/main/java', include: '**/*.java').each { f ->
+            f.eachLine('UTF-8') { line ->
+                (line =~ /"([A-Za-z_][A-Za-z0-9_]*)"/).each { m -> wanted << m[1] }
+            }
+        }
+
+        int count = 0
+        out.withWriter('UTF-8') { w ->
+            srg.eachLine('UTF-8') { line ->
+                def p = line.split(' ')
+                String kind = null
+                String mcp = null
+                String obf = null
+                if (p[0] == 'FD:' && p.length >= 3) {
+                    kind = 'F'; mcp = p[1]; obf = p[2]
+                } else if (p[0] == 'MD:' && p.length >= 5) {
+                    kind = 'M'; mcp = p[1]; obf = p[3]
+                }
+                if (kind != null) {
+                    int a = mcp.lastIndexOf('/')
+                    int b = obf.lastIndexOf('/')
+                    String owner = mcp.substring(0, a)
+                    String mcpName = mcp.substring(a + 1)
+                    String srgName = obf.substring(b + 1)
+                    if (mcpName != srgName && wanted.contains(mcpName)) {
+                        w.write(kind + ' ' + owner + ' ' + mcpName + ' ' + srgName + '\n')
+                        count++
+                    }
+                }
+            }
+        }
+        logger.lifecycle("generateSrgTable: ${count} nomes escritos a partir de ${srg}")
+    }
+}
+
+generateSrgTable.dependsOn 'compileJava'
+sourceSets.main.output.dir(srgTableDir, builtBy: generateSrgTable)

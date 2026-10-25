@@ -1,0 +1,18 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "edge": [6, 7, 8, 9, 10],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20]
+  },
+  "fixed": [],
+  "layers": [
+    {"part": "blade", "sprite": "blade.png", "plane": "front", "at": [-2, 27, 0], "depth": 1, "depthMap": "blade_depth.png"},
+    {"part": "guard", "sprite": "guard.png", "plane": "front", "at": [-4.5, 1, 0], "depth": 3, "depthMap": "guard_depth.png"},
+    {"part": "grip", "sprite": "grip.png", "plane": "front", "at": [-1.5, 0, 0], "depth": 3},
+    {"part": "pommel", "sprite": "pommel.png", "plane": "front", "at": [-2.5, -4, 0], "depth": 2, "depthMap": "pommel_depth.png"}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

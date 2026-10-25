@@ -1,0 +1,52 @@
+{
+  "comment": "Furiah's Visuals: the Photon Edge's own clips (its swings and guard are the saber set's). parts: blade grows out of the nozzle along the hilt (stretch 0 to 1). Events: ignite (sparks at the nozzle). Every clip here is original to this mod.",
+  "clips": {
+    "photon_edge_draw": {
+      "comment": "The draw: the hilt comes up from the hip and the blade springs out of the nozzle in a quarter of a second.",
+      "length": 0.7,
+      "right": [
+        [0.0, [0.02, -0.5, 0.15], [-60, 10, 30]],
+        [0.45, [0.0, 0.02, 0.0], [4, 0, -4], "outCubic"],
+        [0.8, [0.0, 0.0, 0.0], [-2, 0, 2], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "parts": {
+        "blade": [[0.0, 0, 0, 0.001], [0.3, 0, 0, 0.001], [0.62, 0, 0, 1.04, "outCubic"], [0.76, 0, 0, 1, "inOutSine"]]
+      },
+      "events": [[0.31, "ignite"]]
+    },
+    "photon_edge_retract_reignite": {
+      "comment": "Retract & re-ignite: the blade snaps back into the nozzle, the bare hilt is flipped up, spins once in the air and is caught, and the blade springs out again with a burst of sparks.",
+      "length": 2.6,
+      "weaponSpace": "view",
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [-0.06, 0.06, 0.04], [6, 10, 16], "inOutSine"],
+        [0.2, [-0.06, 0.02, 0.04], [-4, 10, 16], "inOutSine"],
+        [0.25, [-0.06, 0.1, 0.04], [14, 10, 16], "outCubic"],
+        [0.5, [-0.06, 0.06, 0.04], [6, 10, 16], "inOutSine"],
+        [0.555, [-0.06, 0.02, 0.04], [-2, 10, 16], "outSine"],
+        [0.64, [-0.06, 0.06, 0.04], [6, 10, 16], "inOutSine"],
+        [0.71, [-0.06, 0.07, 0.04], [8, 10, 14], "inOutSine"],
+        [0.76, [-0.05, 0.05, 0.03], [3, 9, 12], "outSine"],
+        [0.88, [-0.06, 0.06, 0.04], [6, 10, 16], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.24, [0, 0, 0], [0, 0, 0]],
+        [0.3, [0, 0.16, 0.02], [0, 0, 90], "outSine"],
+        [0.36, [0, 0.25, 0.03], [0, 0, 180], "linear"],
+        [0.42, [0, 0.25, 0.03], [0, 0, 270], "linear"],
+        [0.48, [0, 0.15, 0.02], [0, 0, 360], "linear"],
+        [0.545, [0, 0, 0], [0, 0, 360], "inSine"]
+      ],
+      "parts": {
+        "blade": [[0.0, 0, 0, 1], [0.12, 0, 0, 1], [0.19, 0, 0, 0.001, "inCubic"], [0.69, 0, 0, 0.001], [0.75, 0, 0, 1.06, "outCubic"],
+          [0.82, 0, 0, 1, "inOutSine"]]
+      },
+      "events": [[0.24, "release"], [0.545, "catch"], [0.7, "ignite"]],
+      "leftShow": [[0.0, 0], [0.15, 0.5, "outCubic"], [0.85, 0.5], [1.0, 0, "inCubic"]]
+    }
+  }
+}

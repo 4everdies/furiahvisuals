@@ -1,0 +1,25 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "edge": [6, 7, 8, 9, 10],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20]
+  },
+  "fixed": [],
+  "layers": [
+    {"part": "blades", "sprite": "blade right.png", "plane": "front", "at": [2.5, 39, 0], "depth": 1, "depthMap": "blade right_depth.png"},
+    {"part": "blades", "sprite": "blade left.png", "plane": "front", "at": [-9.5, 39, 0], "depth": 1, "depthMap": "blade left_depth.png"},
+    {"part": "eye", "sprite": "eye.png", "plane": "front", "at": [-2.5, 35, 0], "depth": 4, "depthMap": "eye_depth.png"},
+    {"part": "eye", "sprite": "eye spike.png", "plane": "front", "at": [-1.5, 37, 0], "depth": 3, "depthMap": "eye spike_depth.png"},
+    {"part": "haft", "sprite": "haft.png", "plane": "front", "at": [-1.5, 27, 0], "depth": 3},
+    {"part": "bands", "sprite": "band 24.png", "plane": "front", "at": [-2.5, 24, 0], "depth": 5},
+    {"part": "bands", "sprite": "band 10.png", "plane": "front", "at": [-2.5, 10, 0], "depth": 5},
+    {"part": "bands", "sprite": "band -7.png", "plane": "front", "at": [-2.5, -7, 0], "depth": 5},
+    {"part": "bands", "sprite": "band -15.png", "plane": "front", "at": [-2.5, -15, 0], "depth": 5},
+    {"part": "spike", "sprite": "collar.png", "plane": "front", "at": [-1.5, -17, 0], "depth": 3},
+    {"part": "spike", "sprite": "spike.png", "plane": "front", "at": [-1.5, -19, 0], "depth": 3, "depthMap": "spike_depth.png"}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

@@ -1,0 +1,25 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "edge": [6, 7, 8, 9, 10],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20]
+  },
+  "fixed": [],
+  "layers": [
+    {"part": "blade", "sprite": "blade.png", "plane": "front", "at": [-1.5, 40, 0], "depth": 1, "depthMap": "blade_depth.png"},
+    {"part": "spike", "sprite": "spike.png", "plane": "front", "at": [-5.5, 29, 0], "depth": 1},
+    {"part": "gold", "sprite": "socket.png", "plane": "front", "at": [-1.5, 25, 0], "depth": 3},
+    {"part": "gold", "sprite": "socket ring high.png", "plane": "front", "at": [-2.5, 24, 0], "depth": 5},
+    {"part": "gold", "sprite": "socket band.png", "plane": "front", "at": [-1.5, 23, 0], "depth": 3},
+    {"part": "gold", "sprite": "socket ring low.png", "plane": "front", "at": [-2.5, 22, 0], "depth": 5},
+    {"part": "gold", "sprite": "socket base.png", "plane": "front", "at": [-1.5, 21, 0], "depth": 3},
+    {"part": "shaft", "sprite": "shaft.png", "plane": "front", "at": [-1.5, 20, 0], "depth": 3},
+    {"part": "gold", "sprite": "ring high.png", "plane": "front", "at": [-1.5, 3, 0], "depth": 3},
+    {"part": "gold", "sprite": "ring low.png", "plane": "front", "at": [-1.5, -23, 0], "depth": 3},
+    {"part": "gold", "sprite": "cap.png", "plane": "front", "at": [-1.5, -29, 0], "depth": 3}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

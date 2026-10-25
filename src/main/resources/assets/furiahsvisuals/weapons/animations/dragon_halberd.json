@@ -1,0 +1,138 @@
+{
+  "comment": "Furiah's Visuals: the Dragon Halberd's animation set: both hands on the shaft, the dragon's head up. Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). weapon: the halberd in the fist's frame (x the wing, y along the shaft, z flat). parts: the jaw's turn on its hinge in degrees (30: wide open). Every clip here is original to this mod.",
+  "clips": {
+    "dragon_halberd_swing_1": {
+      "comment": "An overhead chop: lifted up and back, then the wing brought down hard in front.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [0.03, 0.15, 0.08], [24, -3, -10], "outSine"],
+        [0.42, [-0.05, -0.1, -0.16], [-52, 8, 14], "outQuart"],
+        [0.66, [-0.04, -0.08, -0.1], [-42, 6, 11], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "dragon_halberd_swing_2": {
+      "comment": "A thrust: drawn back a little, then the horn driven straight ahead.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.02, -0.03, 0.1], [5, -2, 0], "outSine"],
+        [0.38, [-0.1, 0.06, -0.37], [-38, 10, 8], "outQuart"],
+        [0.62, [-0.06, 0.04, -0.21], [-26, 7, 5], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "dragon_halberd_swing_3": {
+      "comment": "A diagonal chop from high on the right, the wing leading, down across to the left.",
+      "length": 0.3,
+      "dir": [-0.6, -0.8],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [0.05, 0.12, 0.06], [20, -8, -18], "outSine"],
+        [0.42, [-0.14, -0.1, -0.12], [-40, 16, 40], "outCubic"],
+        [0.66, [-0.15, -0.11, -0.06], [-33, 18, 50], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "dragon_halberd_quick_swing_1": {
+      "comment": "Rapid clicks: a short chop.",
+      "length": 0.3,
+      "dir": [0, -0.8],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.03, -0.05, -0.1], [-30, 5, 8], "outQuart"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "dragon_halberd_quick_swing_2": {
+      "comment": "Rapid clicks: a short jab with the horn.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.05, 0.03, -0.2], [-22, 6, 4], "outQuart"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "dragon_halberd_crit": {
+      "comment": "A critical hit: heaved high overhead, then brought crashing straight down in front, the wing first.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.2, [0.03, 0.24, 0.1], [36, 0, -10], "outSine"],
+        [0.46, [-0.06, -0.16, -0.24], [-70, 8, 18], "outQuart"],
+        [0.7, [-0.05, -0.13, -0.15], [-58, 6, 15], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "dragon_halberd_guard": {
+      "comment": "Blocking: the shaft held across the body, the dragon's head high on the left.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.24, -0.3, -0.62], "tip": [-0.6, 0.78, -0.18], "edge": [0.78, 0.62, -0.05], "ease": "outCubic"}
+      ]
+    },
+    "dragon_halberd_draw": {
+      "comment": "The draw: raised from below into the hold, the dragon's eyes lighting up as it comes up.",
+      "length": 0.55,
+      "right": [
+        [0.0, [0.12, -0.55, 0.12], [-28, 0, -18]],
+        [0.6, [-0.01, 0.03, -0.01], [4, 2, 3], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "reveal": [[0.0, 0], [0.25, 0], [0.75, 1, "inOutSine"], [1.0, 1]]
+    },
+    "dragon_halberd_awaken": {
+      "comment": "Awaken: the head brought up before you, the dragon turned a little toward you; its jaw opens, its eyes flare and embers puff from its mouth, twice; then it shuts its jaw and settles back into the hold.",
+      "length": 3.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.15, "pos": [0.22, -0.72, -0.66], "tip": [-0.25, 0.94, -0.24], "edge": [0.963, 0.215, -0.161], "ease": "inOutCubic"},
+        {"t": 0.5, "pos": [0.22, -0.71, -0.66], "tip": [-0.25, 0.94, -0.23], "edge": [0.963, 0.216, -0.161], "ease": "inOutSine"},
+        {"t": 0.84, "pos": [0.22, -0.72, -0.66], "tip": [-0.25, 0.94, -0.24], "edge": [0.963, 0.215, -0.161], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "parts": {
+        "jaw": [[0.0, 0], [0.24, 0], [0.32, 30, "outBack"], [0.44, 22, "inOutSine"], [0.5, 30, "outBack"], [0.68, 28], [0.76, 0, "inCubic"]]
+      },
+      "flare": [[0.0, 0], [0.22, 0], [0.32, 1, "outSine"], [0.42, 0.6, "inOutSine"], [0.5, 1, "outSine"], [0.68, 0.7, "inOutSine"],
+        [0.8, 0, "inOutSine"]],
+      "events": [[0.32, "flare"], [0.5, "flare"]]
+    },
+    "dragon_halberd_overhead_twirl": {
+      "comment": "Overhead twirl: raised high in front and spun round like a wheel the other way from the Halberd's, the wing and the horn sweeping round, two turns; then back down into the hold (the left hand lets go).",
+      "length": 2.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.12, "pos": [0.28, 0.0, -1.0], "tip": [0, 1, 0.2], "edge": [1, 0, 0], "ease": "inOutCubic"},
+        {"t": 0.2, "pos": [0.28, 0.02, -1.0], "tip": [0.98, 0, 0.2], "edge": [0, -1, 0], "ease": "inSine"},
+        {"t": 0.28, "pos": [0.28, 0.02, -1.0], "tip": [0, -0.98, 0.2], "edge": [-1, 0, 0], "ease": "linear"},
+        {"t": 0.36, "pos": [0.28, 0.02, -1.0], "tip": [-0.98, 0, 0.2], "edge": [0, 1, 0], "ease": "linear"},
+        {"t": 0.44, "pos": [0.28, 0.02, -1.0], "tip": [0, 0.98, 0.2], "edge": [1, 0, 0], "ease": "linear"},
+        {"t": 0.52, "pos": [0.28, 0.02, -1.0], "tip": [0.98, 0, 0.2], "edge": [0, -1, 0], "ease": "linear"},
+        {"t": 0.6, "pos": [0.28, 0.02, -1.0], "tip": [0, -0.98, 0.2], "edge": [-1, 0, 0], "ease": "linear"},
+        {"t": 0.68, "pos": [0.28, 0.02, -1.0], "tip": [-0.98, 0, 0.2], "edge": [0, 1, 0], "ease": "linear"},
+        {"t": 0.78, "pos": [0.28, 0.0, -1.0], "tip": [0, 1, 0.2], "edge": [1, 0, 0], "ease": "outSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "leftFree": [[0.0, 0], [0.1, 1, "outSine"], [0.82, 1], [1.0, 0, "inOutSine"]]
+    },
+    "dragon_halberd_plant": {
+      "comment": "Plant: the butt set down out in front with a thump, the shaft upright, the dragon's head high and looking out to the left; held; then lifted back into the hold.",
+      "length": 2.6,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.15, "pos": [0.32, -0.46, -0.98], "tip": [-0.03, 1, 0.04], "edge": [0.98, 0, 0.2], "ease": "inOutCubic"},
+        {"t": 0.21, "pos": [0.32, -0.55, -0.98], "tip": [-0.03, 1, 0.04], "edge": [0.98, 0, 0.2], "ease": "inQuart"},
+        {"t": 0.3, "pos": [0.32, -0.52, -0.98], "tip": [-0.04, 1, 0.03], "edge": [0.98, 0, 0.2], "ease": "outSine"},
+        {"t": 0.78, "pos": [0.32, -0.52, -0.98], "tip": [-0.03, 1, 0.04], "edge": [0.98, 0, 0.2], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ]
+    }
+  }
+}

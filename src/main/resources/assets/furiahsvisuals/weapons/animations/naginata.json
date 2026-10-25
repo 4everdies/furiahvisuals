@@ -1,0 +1,132 @@
+{
+  "comment": "Furiah's Visuals: the naginata's animation set: both hands on the shaft, the curved blade up. Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). weapon: the naginata in the fist's frame (x edge, y along the shaft, z flat). Every clip here is original to this mod.",
+  "clips": {
+    "naginata_swing_1": {
+      "comment": "A wide sweeping cut from right to left: the blade brought down level and swept across in a long arc.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.08, 0.02, 0.04], [6, -24, -20], "outSine"],
+        [0.44, [-0.18, -0.04, -0.14], [-24, 48, 62], "outCubic"],
+        [0.68, [-0.2, -0.05, -0.08], [-20, 54, 70], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "naginata_swing_2": {
+      "comment": "A rising cut from low on the left, the blade sweeping up and across to the right.",
+      "length": 0.3,
+      "dir": [0.7, 0.7],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [-0.1, -0.12, 0.04], [-20, 18, 40], "outSine"],
+        [0.44, [0.08, 0.08, -0.12], [26, -18, -24], "outCubic"],
+        [0.68, [0.09, 0.09, -0.07], [30, -20, -28], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "naginata_swing_3": {
+      "comment": "A thrust: drawn back a little, then the point driven straight ahead.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.02, -0.02, 0.09], [4, -2, 0], "outSine"],
+        [0.38, [-0.1, 0.05, -0.36], [-36, 10, 8], "outQuart"],
+        [0.62, [-0.06, 0.03, -0.21], [-25, 7, 5], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "naginata_quick_swing_1": {
+      "comment": "Rapid clicks: a short sweep to the left.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.1, -0.02, -0.08], [-12, 26, 32], "outQuart"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "naginata_quick_swing_2": {
+      "comment": "Rapid clicks: a short jab.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.05, 0.03, -0.2], [-22, 6, 4], "outQuart"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "naginata_crit": {
+      "comment": "A critical hit: raised high on the right and brought down in a long diagonal arc across to the low left.",
+      "length": 0.3,
+      "dir": [-0.7, -0.7],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.2, [0.06, 0.18, 0.08], [30, -12, -24], "outSine"],
+        [0.46, [-0.16, -0.14, -0.16], [-52, 24, 58], "outQuart"],
+        [0.7, [-0.15, -0.12, -0.1], [-44, 22, 54], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "naginata_guard": {
+      "comment": "Blocking: the blade high on the left, the shaft angled down across the body to the right.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.26, -0.3, -0.64], "tip": [-0.66, 0.72, -0.2], "edge": [0.72, 0.68, -0.12], "ease": "outCubic"}
+      ]
+    },
+    "naginata_draw": {
+      "comment": "The draw: brought up in front and spun once round like a wheel, then caught in the hold.",
+      "length": 0.7,
+      "right": [
+        [0.0, [0.04, -0.4, 0.02], [-10, 0, 0]],
+        {"t": 0.14, "pos": [0.3, -0.16, -0.9], "tip": [0, 1, 0.14], "edge": [1, 0, 0], "ease": "outSine"},
+        {"t": 0.28, "pos": [0.3, -0.15, -0.9], "tip": [-0.99, 0, 0.14], "edge": [0, 1, 0], "ease": "linear"},
+        {"t": 0.42, "pos": [0.3, -0.15, -0.9], "tip": [0, -0.99, 0.14], "edge": [-1, 0, 0], "ease": "linear"},
+        {"t": 0.56, "pos": [0.3, -0.15, -0.9], "tip": [0.99, 0, 0.14], "edge": [0, -1, 0], "ease": "linear"},
+        {"t": 0.7, "pos": [0.3, -0.16, -0.9], "tip": [0, 1, 0.14], "edge": [1, 0, 0], "ease": "outSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "leftFree": [[0.0, 1], [0.78, 1], [1.0, 0, "inOutSine"]]
+    },
+    "naginata_sweep_spin": {
+      "comment": "Sweep spin: the blade swept in a wide circle round you, low and level, the left hand letting go; then back into the hold.",
+      "length": 2.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.1, [0.04, -0.04, 0.02], [-18, -14, 10], "inOutSine"],
+        [0.3, [-1.0, -0.06, 0.64], [-18, 90, 10], "inSine"],
+        [0.48, [-0.38, -0.06, 1.28], [-18, 180, 10], "linear"],
+        [0.66, [0.28, -0.06, 0.64], [-18, 270, 10], "linear"],
+        [0.84, [0.02, -0.03, -0.02], [-6, 360, 4], "outSine"],
+        [1.0, [0, 0, 0], [0, 360, 0], "inOutSine"]
+      ],
+      "leftFree": [[0.0, 0], [0.1, 1, "outSine"], [0.86, 1], [1.0, 0, "inOutSine"]]
+    },
+    "naginata_plant": {
+      "comment": "Plant: the butt set down out in front with a thump, the shaft upright and the blade curving high; held; then lifted back into the hold.",
+      "length": 2.6,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.15, "pos": [0.32, -0.42, -0.95], "tip": [-0.03, 1, 0.04], "edge": [0.98, 0, 0.2], "ease": "inOutCubic"},
+        {"t": 0.21, "pos": [0.32, -0.51, -0.95], "tip": [-0.03, 1, 0.04], "edge": [0.98, 0, 0.2], "ease": "inQuart"},
+        {"t": 0.3, "pos": [0.32, -0.48, -0.95], "tip": [-0.04, 1, 0.03], "edge": [0.98, 0, 0.2], "ease": "outSine"},
+        {"t": 0.78, "pos": [0.32, -0.48, -0.95], "tip": [-0.03, 1, 0.04], "edge": [0.98, 0, 0.2], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ]
+    },
+    "naginata_edge_check": {
+      "comment": "Edge check: the blade brought down before you, edge turned toward you; a glint runs along the edge to the point.",
+      "length": 2.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.18, "pos": [0.3, -0.62, -0.5], "tip": [-0.36, 0.86, -0.36], "edge": [0.47, 0.5, 0.73], "ease": "inOutCubic"},
+        {"t": 0.82, "pos": [0.3, -0.6, -0.5], "tip": [-0.36, 0.86, -0.36], "edge": [0.47, 0.5, 0.73], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "glint": [[0.0, -1], [0.3, -1, "step"], [0.3001, 0.0, "step"], [0.7, 1.0, "inOutSine"], [0.7001, -1, "step"]]
+    }
+  }
+}

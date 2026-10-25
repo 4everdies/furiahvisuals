@@ -1,0 +1,32 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20],
+    "paint": [31, 32, 33, 34, 35],
+    "chain": [36, 37, 38, 39, 40]
+  },
+  "fixed": [
+    {"name": "cover", "color": "#66676B", "slots": [41, 42, 43, 44, 45], "glow": false, "alpha": 1},
+    {"name": "cord", "color": "#E8DC50", "slots": [46, 47, 48, 49, 50], "glow": false, "alpha": 1}
+  ],
+  "layers": [
+    {"part": "body", "sprite": "body.png", "plane": "front", "at": [1, 11, 0], "depth": 4},
+    {"part": "top", "sprite": "cover.png", "plane": "front", "at": [0, 10, 0], "depth": 3},
+    {"part": "muffler", "sprite": "muffler.png", "plane": "front", "at": [1, 12, 0], "depth": 2},
+    {"part": "rear", "sprite": "rear handle.png", "plane": "front", "at": [-1.5, 4, 0], "depth": 2, "depthMap": "rear handle_depth.png"},
+    {"part": "dark", "sprite": "trigger.png", "plane": "front", "at": [1.5, 2, 0], "depth": 1},
+    {"part": "front", "sprite": "front handle.png", "plane": "top", "at": [-3.5, 9.5, -3.5], "depth": 1},
+    {"part": "dark", "sprite": "hand guard.png", "plane": "top", "at": [-4.5, 11, -2.5], "depth": 1},
+    {"part": "dark", "sprite": "starter housing.png", "plane": "front", "at": [1, 5, -2.5], "depth": 1},
+    {"part": "starter", "sprite": "starter.png", "plane": "front", "at": [-1, 5.5, -3], "depth": 1},
+    {"part": "cord", "sprite": "cord.png", "plane": "front", "at": [0, 5, -3], "depth": 1},
+    {"part": "dark", "sprite": "clutch cover.png", "plane": "front", "at": [2.5, 11, 2.5], "depth": 1},
+    {"part": "bar", "sprite": "bar.png", "plane": "front", "at": [2.5, 31, 0], "depth": 1},
+    {"part": "chain", "sprite": "chain.png", "plane": "front", "at": [1.5, 32, 0], "depth": 1}
+  ],
+  "stretch": {"cord": 0.2922},
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

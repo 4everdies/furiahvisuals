@@ -1,0 +1,24 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "edge": [6, 7, 8, 9, 10],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20]
+  },
+  "fixed": [
+    {"name": "ash", "color": "#8F6640", "slots": [41, 42, 43, 44, 45], "glow": false, "alpha": 1}
+  ],
+  "layers": [
+    {"part": "head", "sprite": "bit.png", "plane": "front", "at": [2.5, 19, 0], "depth": 1, "depthMap": "bit_depth.png"},
+    {"part": "head", "sprite": "eye.png", "plane": "front", "at": [-2.5, 18, 0], "depth": 4},
+    {"part": "head", "sprite": "poll.png", "plane": "front", "at": [-4.5, 16, 0], "depth": 4},
+    {"part": "haft", "sprite": "haft.png", "plane": "front", "at": [-1.5, 18, 0], "depth": 3},
+    {"part": "wrap", "sprite": "wrap.png", "plane": "front", "at": [-1.5, -2, 0], "depth": 3},
+    {"part": "haft", "sprite": "knob.png", "plane": "front", "at": [-1.5, -9, 0], "depth": 3},
+    {"part": "iron", "sprite": "rivets back.png", "plane": "front", "at": [-0.5, 11, -2], "depth": 1},
+    {"part": "iron", "sprite": "rivets front.png", "plane": "front", "at": [-0.5, 11, 2], "depth": 1}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

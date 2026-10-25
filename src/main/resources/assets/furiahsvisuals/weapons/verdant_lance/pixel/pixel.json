@@ -1,0 +1,33 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "handle": [16, 17, 18, 19, 20],
+    "energy": [26, 27, 28, 29, 30]
+  },
+  "fixed": [
+    {"name": "leaf", "color": "#4C9A38", "slots": [41, 42, 43, 44, 45], "glow": false, "alpha": 1},
+    {"name": "petal", "color": "#F2E2EA", "slots": [46, 47, 48, 49, 50], "glow": false, "alpha": 1}
+  ],
+  "layers": [
+    {"part": "shaft", "sprite": "shaft.png", "plane": "front", "at": [-1.5, 31, 0], "depth": 3},
+    {"part": "grip", "sprite": "grip upper.png", "plane": "front", "at": [-1.5, 2, 0], "depth": 3},
+    {"part": "grip", "sprite": "grip lower.png", "plane": "front", "at": [-1.5, -13, 0], "depth": 3},
+    {"part": "roots", "sprite": "roots.png", "plane": "front", "at": [-2.5, -27, 0], "depth": 3, "depthMap": "roots_depth.png"},
+    {"part": "blade", "sprite": "blade.png", "plane": "front", "at": [-2.5, 40, 0], "depth": 1, "depthMap": "blade_depth.png"},
+    {"part": "roots", "sprite": "tendrils.png", "plane": "front", "at": [-3.5, 34, 0], "depth": 1},
+    {"part": "leaf_1", "sprite": "leaf_1.png", "plane": "front", "at": [-4.5, -20, 0], "depth": 1},
+    {"part": "leaf_2", "sprite": "leaf_2.png", "plane": "front", "at": [1.5, 8, 0], "depth": 1},
+    {"part": "leaf_3", "sprite": "leaf_3.png", "plane": "side", "at": [0, 12, 1.5], "depth": 1},
+    {"part": "leaf_4", "sprite": "leaf_4.png", "plane": "side", "at": [0, 17, -4.5], "depth": 1},
+    {"part": "leaf_5", "sprite": "leaf_5.png", "plane": "front", "at": [1.5, 21, 0], "depth": 1},
+    {"part": "leaf_6", "sprite": "leaf_6.png", "plane": "front", "at": [-4.5, 25, 0], "depth": 1},
+    {"part": "leaf_7", "sprite": "leaf_7.png", "plane": "side", "at": [0, 29, 1.5], "depth": 1},
+    {"part": "petal_1", "sprite": "petal_1.png", "plane": "front", "at": [1.5, 31, 0], "depth": 1},
+    {"part": "petal_2", "sprite": "petal_2.png", "plane": "side", "at": [0, 31, -2.5], "depth": 1},
+    {"part": "petal_3", "sprite": "petal_3.png", "plane": "front", "at": [-2.5, 31, 0], "depth": 1},
+    {"part": "petal_4", "sprite": "petal_4.png", "plane": "side", "at": [0, 31, 1.5], "depth": 1}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

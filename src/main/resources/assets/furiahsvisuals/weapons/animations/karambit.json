@@ -1,0 +1,153 @@
+{
+  "comment": "Furiah's Visuals: the Karambit's animation set (a reverse grip: the blade hangs under the fist and hooks in toward the middle of the view, the finger ring above the fist). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). weapon: the knife in the fist (x edge, y handle toward the blade, z flat). Every clip here is original to this mod.",
+  "clips": {
+    "karambit_swing_1": {
+      "comment": "A hooking slash from right to left, the hook leading.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.06, 0.02, 0.03], [0, -25, -10], "outSine"],
+        [0.42, [-0.22, -0.02, -0.1], [5, 40, 20], "outCubic"],
+        [0.66, [-0.26, -0.04, -0.05], [5, 45, 24], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "karambit_swing_2": {
+      "comment": "An upward rip: from low, the hook drawn up through the target.",
+      "length": 0.3,
+      "dir": [0, 1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.0, -0.08, 0.02], [-20, 0, 0], "outSine"],
+        [0.42, [-0.06, 0.12, -0.1], [35, 10, 10], "outCubic"],
+        [0.66, [-0.07, 0.14, -0.05], [40, 12, 12], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "karambit_swing_3": {
+      "comment": "A backhand hook from left to right.",
+      "length": 0.3,
+      "dir": [1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [-0.1, 0.0, 0.02], [0, 30, 20], "outSine"],
+        [0.42, [0.1, 0.02, -0.08], [0, -35, -20], "outCubic"],
+        [0.66, [0.12, 0.0, -0.04], [0, -40, -24], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "karambit_quick_swing_1": {
+      "comment": "Rapid clicks: a short hook to the left.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.1, 0.0, -0.06], [0, 22, 10], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "karambit_quick_swing_2": {
+      "comment": "Rapid clicks: a short rip upward.",
+      "length": 0.3,
+      "dir": [0, 1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.03, 0.06, -0.06], [20, 6, 4], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "karambit_crit": {
+      "comment": "A critical hit: raised high, then driven down and in, the point first.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.02, 0.08, 0.04], [20, 0, 0], "outSine"],
+        [0.38, [-0.06, -0.1, -0.22], [-30, 10, 0], "outQuart"],
+        [0.66, [-0.05, -0.08, -0.14], [-26, 8, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "karambit_guard": {
+      "comment": "Blocking: the fist raised before the face, the blade down along the forearm.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [1.0, [-0.16, 0.16, 0.08], [10, 20, 0], "outCubic"]
+      ]
+    },
+    "karambit_dual_guard": {
+      "comment": "Blocking with a karambit in each hand: both fists raised, the blades down along the forearms.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [1.0, [-0.06, 0.12, 0.05], [10, 15, 0], "outCubic"]
+      ]
+    },
+    "karambit_draw": {
+      "comment": "The draw: up from below in one motion.",
+      "length": 0.5,
+      "right": [
+        [0.0, [0.04, -0.5, 0.1], [-40, 0, -20]],
+        [0.55, [0.0, 0.02, 0.0], [4, 0, 4], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "karambit_ring_spin": {
+      "comment": "Ring spin: the grip let go, the knife spins three times round the finger through its ring, and is caught again.",
+      "length": 2.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [-0.04, 0.06, 0.04], [8, 8, 4], "inOutSine"],
+        [0.66, [-0.04, 0.07, 0.04], [10, 8, 4], "inOutSine"],
+        [0.7, [-0.04, 0.04, 0.04], [4, 8, 4], "outSine"],
+        [0.8, [-0.04, 0.06, 0.04], [8, 8, 4], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.160, [0.0000, 0.0000, 0], [0, 0, 0]],
+        [0.181, [-0.1001, -0.0244, 0], [0, 0, 45], "inSine"],
+        [0.202, [-0.1537, -0.1124, 0], [0, 0, 90], "linear"],
+        [0.223, [-0.1293, -0.2124, 0], [0, 0, 135], "linear"],
+        [0.243, [-0.0413, -0.2660, 0], [0, 0, 180], "linear"],
+        [0.264, [0.0588, -0.2416, 0], [0, 0, 225], "linear"],
+        [0.285, [0.1124, -0.1537, 0], [0, 0, 270], "linear"],
+        [0.306, [0.0880, -0.0536, 0], [0, 0, 315], "linear"],
+        [0.327, [0.0000, 0.0000, 0], [0, 0, 360], "linear"],
+        [0.348, [-0.1001, -0.0244, 0], [0, 0, 405], "linear"],
+        [0.368, [-0.1537, -0.1124, 0], [0, 0, 450], "linear"],
+        [0.389, [-0.1293, -0.2124, 0], [0, 0, 495], "linear"],
+        [0.410, [-0.0413, -0.2660, 0], [0, 0, 540], "linear"],
+        [0.431, [0.0588, -0.2416, 0], [0, 0, 585], "linear"],
+        [0.452, [0.1124, -0.1537, 0], [0, 0, 630], "linear"],
+        [0.473, [0.0880, -0.0536, 0], [0, 0, 675], "linear"],
+        [0.493, [0.0000, 0.0000, 0], [0, 0, 720], "linear"],
+        [0.514, [-0.1001, -0.0244, 0], [0, 0, 765], "linear"],
+        [0.535, [-0.1537, -0.1124, 0], [0, 0, 810], "linear"],
+        [0.556, [-0.1293, -0.2124, 0], [0, 0, 855], "linear"],
+        [0.577, [-0.0413, -0.2660, 0], [0, 0, 900], "linear"],
+        [0.598, [0.0588, -0.2416, 0], [0, 0, 945], "linear"],
+        [0.618, [0.1124, -0.1537, 0], [0, 0, 990], "linear"],
+        [0.639, [0.0880, -0.0536, 0], [0, 0, 1035], "linear"],
+        [0.660, [0.0000, 0.0000, 0], [0, 0, 1080], "outSine"]
+      ],
+      "leftShow": [[0.0, 0], [0.12, 0.6, "outCubic"], [0.8, 0.6], [1.0, 0, "inCubic"]]
+    },
+    "karambit_hook_check": {
+      "comment": "Hook check: brought up close, the hook turned flat toward you, then tilted to show its edge as a glint runs along it.",
+      "length": 2.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.18, "pos": [0.26, -0.1, -0.52], "tip": [-0.2, -0.92, 0.32], "edge": [-0.96, 0.2, -0.15], "ease": "inOutCubic"},
+        {"t": 0.36, "pos": [0.26, -0.1, -0.52], "tip": [-0.2, -0.92, 0.32], "edge": [-0.96, 0.2, -0.15], "ease": "inOutSine"},
+        {"t": 0.56, "pos": [0.25, -0.1, -0.52], "tip": [-0.12, -0.95, 0.28], "edge": [-0.6, 0.12, 0.78], "ease": "inOutCubic"},
+        {"t": 0.78, "pos": [0.25, -0.11, -0.52], "tip": [-0.14, -0.94, 0.3], "edge": [-0.62, 0.1, 0.77], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "glint": [[0.0, -1], [0.56, -1, "step"], [0.5601, 0.0, "step"], [0.76, 1.0, "inOutSine"], [0.7601, -1, "step"]],
+      "leftShow": [[0.0, 0], [0.15, 0.7, "outCubic"], [0.85, 0.7], [1.0, 0, "inCubic"]]
+    }
+  }
+}

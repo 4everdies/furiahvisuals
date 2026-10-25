@@ -1,0 +1,21 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "edge": [6, 7, 8, 9, 10],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20],
+    "accent": [21, 22, 23, 24, 25]
+  },
+  "fixed": [],
+  "layers": [
+    {"part": "blade", "sprite": "blade.png", "plane": "front", "at": [-1.5, 11, 0], "depth": 1},
+    {"part": "handle_a", "sprite": "handle a.png", "plane": "front", "at": [-1.5, 4, 1], "depth": 1},
+    {"part": "pin_a", "sprite": "pin a.png", "plane": "front", "at": [-0.5, 4, 1], "depth": 1},
+    {"part": "handle_b", "sprite": "handle b.png", "plane": "front", "at": [-1.5, 4, -1], "depth": 1},
+    {"part": "pin_b", "sprite": "pin b.png", "plane": "front", "at": [-0.5, 4, -1], "depth": 1},
+    {"part": "latch", "sprite": "latch.png", "plane": "front", "at": [-1.5, -3, -1], "depth": 1}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

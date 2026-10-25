@@ -1,0 +1,170 @@
+{
+  "comment": "Furiah's Visuals: the Verdant Lance's animation set: both hands on the shaft, the crystal blade forward, as the spear's. Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}); weapon: the lance in the fist's frame (x edge, y along the shaft, z flat); parts: its leaves and petals turned on their hinges round the shaft. Every clip here is original to this mod.",
+  "clips": {
+    "verdant_lance_swing_1": {
+      "comment": "A thrust: drawn back a little, then the crystal driven straight ahead, a few leaves torn loose to drift away.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.02, -0.02, 0.1], [4, -2, 0], "outSine"],
+        [0.38, [-0.1, 0.06, -0.4], [-36, 10, 8], "outQuart"],
+        [0.62, [-0.06, 0.04, -0.24], [-24, 7, 5], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "events": [[0.36, "leaves", "3"]]
+    },
+    "verdant_lance_swing_2": {
+      "comment": "A high thrust, the crystal driven up and over, a few leaves drifting off it.",
+      "length": 0.3,
+      "dir": [0, 0.3],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.02, -0.05, 0.08], [0, -2, 0], "outSine"],
+        [0.38, [-0.08, 0.14, -0.38], [-22, 8, 6], "outQuart"],
+        [0.62, [-0.05, 0.09, -0.22], [-14, 6, 4], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "events": [[0.36, "leaves", "3"]]
+    },
+    "verdant_lance_swing_3": {
+      "comment": "A sweeping strike with the shaft, swung flat from right to left.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [0.08, 0.04, 0.05], [0, -38, -22], "outSine"],
+        [0.42, [-0.15, -0.04, -0.1], [-12, 30, 56], "outCubic"],
+        [0.68, [-0.21, -0.07, -0.05], [-12, 46, 62], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "verdant_lance_quick_swing_1": {
+      "comment": "Rapid clicks: a short jab.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.06, 0.03, -0.22], [-24, 6, 4], "outQuart"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "verdant_lance_quick_swing_2": {
+      "comment": "Rapid clicks: another jab, a little higher.",
+      "length": 0.3,
+      "dir": [0, 0.2],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.05, 0.07, -0.2], [-16, 5, 3], "outQuart"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "verdant_lance_crit": {
+      "comment": "A critical hit: a lunge, the lance driven far forward through the front hand, a swirl of leaves torn off it.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [0.03, -0.03, 0.14], [6, -3, 0], "outSine"],
+        [0.4, [-0.12, 0.07, -0.52], [-40, 12, 9], "outQuart"],
+        [0.66, [-0.08, 0.05, -0.32], [-28, 8, 6], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.4, [0, 0.12, 0], [0, 0, 0], "outQuart"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "events": [[0.38, "leaves", "6"]]
+    },
+    "verdant_lance_guard": {
+      "comment": "Blocking: the shaft brought across the body, level, between you and the blow.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [1.0, [-0.14, 0.12, -0.02], [0, 0, 70], "outCubic"]
+      ]
+    },
+    "verdant_lance_draw": {
+      "comment": "The draw: the lance slides forward through the hands into the hold, and its leaves sprout along the shaft one after another from the butt up, unfolding from the bark.",
+      "length": 0.9,
+      "right": [
+        [0.0, [0.03, -0.12, 0.06], [-8, 0, 0]],
+        [0.5, [0, 0, 0], [0, 0, 0], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0]]
+      ],
+      "weapon": [
+        [0.0, [0, -0.6, 0], [0, 0, 0]],
+        [0.5, [0, 0.02, 0], [0, 0, 0], "outCubic"],
+        [0.7, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "leftFree": [[0.0, 1], [0.46, 1], [0.66, 0, "inOutSine"]],
+      "parts": {
+        "leaf_1": [[0.0, -52, 0, 0.15], [0.3, -52, 0, 0.15], [0.52, 0, 0, 1, "outCubic"]],
+        "leaf_2": [[0.0, -52, 0, 0.15], [0.36, -52, 0, 0.15], [0.58, 0, 0, 1, "outCubic"]],
+        "leaf_3": [[0.0, -52, 0, 0.15], [0.42, -52, 0, 0.15], [0.64, 0, 0, 1, "outCubic"]],
+        "leaf_4": [[0.0, -52, 0, 0.15], [0.48, -52, 0, 0.15], [0.7, 0, 0, 1, "outCubic"]],
+        "leaf_5": [[0.0, -52, 0, 0.15], [0.54, -52, 0, 0.15], [0.76, 0, 0, 1, "outCubic"]],
+        "leaf_6": [[0.0, -52, 0, 0.15], [0.6, -52, 0, 0.15], [0.82, 0, 0, 1, "outCubic"]],
+        "leaf_7": [[0.0, -52, 0, 0.15], [0.66, -52, 0, 0.15], [0.88, 0, 0, 1, "outCubic"]]
+      }
+    },
+    "verdant_lance_bloom": {
+      "comment": "Bloom: the lance raised upright before you, its top leaning toward you; its leaves unfurl along the shaft from the butt up, and the bud under the crystal opens into a four-petalled flower; held a moment, then they settle back and it returns to the hold (the left hand lets go).",
+      "length": 3.6,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.14, "pos": [0.16, -0.78, -1.2], "tip": [-0.04, 0.95, 0.3], "edge": [0.9, 0, 0.44], "ease": "inOutCubic"},
+        {"t": 0.86, "pos": [0.16, -0.76, -1.2], "tip": [-0.04, 0.95, 0.3], "edge": [0.9, 0, 0.44], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "leftFree": [[0.0, 0], [0.1, 1, "outSine"], [0.9, 1], [1.0, 0, "inOutSine"]],
+      "parts": {
+        "leaf_1": [[0.0, 0], [0.16, 0], [0.3, 26, 0, 1, "outSine"], [0.8, 26], [0.94, 0, 0, 1, "inOutSine"]],
+        "leaf_2": [[0.0, 0], [0.2, 0], [0.34, 26, 0, 1, "outSine"], [0.8, 26], [0.94, 0, 0, 1, "inOutSine"]],
+        "leaf_3": [[0.0, 0], [0.24, 0], [0.38, 26, 0, 1, "outSine"], [0.8, 26], [0.94, 0, 0, 1, "inOutSine"]],
+        "leaf_4": [[0.0, 0], [0.28, 0], [0.42, 26, 0, 1, "outSine"], [0.8, 26], [0.94, 0, 0, 1, "inOutSine"]],
+        "leaf_5": [[0.0, 0], [0.32, 0], [0.46, 26, 0, 1, "outSine"], [0.8, 26], [0.94, 0, 0, 1, "inOutSine"]],
+        "leaf_6": [[0.0, 0], [0.36, 0], [0.5, 26, 0, 1, "outSine"], [0.8, 26], [0.94, 0, 0, 1, "inOutSine"]],
+        "leaf_7": [[0.0, 0], [0.4, 0], [0.54, 26, 0, 1, "outSine"], [0.8, 26], [0.94, 0, 0, 1, "inOutSine"]],
+        "petal_1": [[0.0, 0], [0.36, 0], [0.52, 46, 0, 1, "outCubic"], [0.8, 46], [0.94, 0, 0, 1, "inOutSine"]],
+        "petal_2": [[0.0, 0], [0.38, 0], [0.54, 46, 0, 1, "outCubic"], [0.8, 46], [0.94, 0, 0, 1, "inOutSine"]],
+        "petal_3": [[0.0, 0], [0.4, 0], [0.56, 46, 0, 1, "outCubic"], [0.8, 46], [0.94, 0, 0, 1, "inOutSine"]],
+        "petal_4": [[0.0, 0], [0.42, 0], [0.58, 46, 0, 1, "outCubic"], [0.8, 46], [0.94, 0, 0, 1, "inOutSine"]]
+      }
+    },
+    "verdant_lance_spin": {
+      "comment": "Spin: raised in front and spun fast round its middle like a wheel, two full turns, its leaves fluttering, given a little hop up out of the turn and caught, then back to the hold (the left hand lets go).",
+      "length": 2.0,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.1, "pos": [0.28, -0.14, -0.95], "tip": [0, 1, 0.16], "edge": [1, 0, 0], "ease": "inOutCubic"},
+        {"t": 0.16, "pos": [0.28, -0.12, -0.95], "tip": [-0.98, 0, 0.16], "edge": [0, 1, 0], "ease": "inSine"},
+        {"t": 0.22, "pos": [0.28, -0.12, -0.95], "tip": [0, -0.98, 0.16], "edge": [-1, 0, 0], "ease": "linear"},
+        {"t": 0.28, "pos": [0.28, -0.12, -0.95], "tip": [0.98, 0, 0.16], "edge": [0, -1, 0], "ease": "linear"},
+        {"t": 0.34, "pos": [0.28, -0.12, -0.95], "tip": [0, 0.98, 0.16], "edge": [1, 0, 0], "ease": "linear"},
+        {"t": 0.4, "pos": [0.28, -0.12, -0.95], "tip": [-0.98, 0, 0.16], "edge": [0, 1, 0], "ease": "linear"},
+        {"t": 0.46, "pos": [0.28, -0.12, -0.95], "tip": [0, -0.98, 0.16], "edge": [-1, 0, 0], "ease": "linear"},
+        {"t": 0.52, "pos": [0.28, -0.12, -0.95], "tip": [0.98, 0, 0.16], "edge": [0, -1, 0], "ease": "linear"},
+        {"t": 0.58, "pos": [0.28, -0.12, -0.95], "tip": [0, 1, 0.16], "edge": [1, 0, 0], "ease": "outSine"},
+        {"t": 0.66, "pos": [0.28, 0.02, -0.95], "tip": [0, 1, 0.16], "edge": [1, 0, 0], "ease": "outSine"},
+        {"t": 0.74, "pos": [0.28, -0.14, -0.95], "tip": [0, 1, 0.16], "edge": [1, 0, 0], "ease": "inSine"},
+        {"t": 0.8, "pos": [0.28, -0.13, -0.95], "tip": [0, 1, 0.16], "edge": [1, 0, 0], "ease": "outSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "leftFree": [[0.0, 0], [0.08, 1, "outSine"], [0.84, 1], [1.0, 0, "inOutSine"]]
+    },
+    "verdant_lance_look_over": {
+      "comment": "Lowered and leaned in so the crystal comes down in front of you, turned to show one face, then the other.",
+      "length": 3.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.18, [-0.16, -0.2, -0.26], [26, 0, 16], "inOutCubic"],
+        [0.4, [-0.16, -0.2, -0.26], [28, 38, 16], "inOutSine"],
+        [0.62, [-0.16, -0.2, -0.26], [28, -36, 14], "inOutSine"],
+        [0.82, [-0.16, -0.2, -0.26], [26, 0, 16], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ]
+    }
+  }
+}

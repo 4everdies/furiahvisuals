@@ -1,0 +1,17 @@
+{
+  "comment": "Furiah's Visuals: the Crescent Bow's own clip (its swings, draw and the shared inspects are the bow set's). Every clip here is original to this mod.",
+  "clips": {
+    "crescent_bow_moonrise": {
+      "comment": "Moonrise: the bow taken out low before you and laid on its back, side-on, so its whole crescent shows with the horns up like a new moon's, tilted; then lifted slowly as a moon rises, levelling as it climbs until its horns cradle the middle of the view, its star engravings and string glowing brighter until they shine; the glow ebbs as it comes back to the hold.",
+      "length": 3.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.16, "pos": [0.02, -0.66, -1.5], "tip": [0.96, 0.27, 0.05], "edge": [0.27, -0.96, 0], "ease": "inOutCubic"},
+        {"t": 0.62, "pos": [0.0, -0.17, -1.55], "tip": [1, 0.03, 0.05], "edge": [0.03, -1, 0], "ease": "inOutSine"},
+        {"t": 0.8, "pos": [0.0, -0.18, -1.55], "tip": [1, 0.02, 0.05], "edge": [0.02, -1, 0], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "flare": [[0.0, 0], [0.16, 0], [0.62, 1, "inOutSine"], [0.8, 1], [0.97, 0, "inOutSine"]]
+    }
+  }
+}

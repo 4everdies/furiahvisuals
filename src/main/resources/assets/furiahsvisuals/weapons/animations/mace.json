@@ -1,0 +1,111 @@
+{
+  "comment": "Furiah's Visuals: the mace's animation set (a one-handed flanged mace held upright at the right). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}); weapon: turns in the fist's frame (x edge, y handle, z flat), with the offsets that keep the wrist loop where the wrist is when it spins by it. Every clip here is original to this mod.",
+  "clips": {
+    "mace_swing_1": {
+      "comment": "An overhead bash: lifted, and brought down hard in front.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [0.02, 0.12, 0.06], [24, -6, -6], "outSine"],
+        [0.42, [-0.06, -0.14, -0.2], [-80, 8, 6], "outQuart"],
+        [0.66, [-0.06, -0.16, -0.16], [-86, 10, 8], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "mace_swing_2": {
+      "comment": "A short hook from the right, the head swung round level at the target.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.08, 0.02, 0.04], [-30, -30, -40], "outSine"],
+        [0.42, [-0.18, -0.04, -0.14], [-50, 46, 40], "outCubic"],
+        [0.66, [-0.2, -0.05, -0.1], [-52, 50, 44], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "mace_swing_3": {
+      "comment": "A backhand hook from the left, a little rising.",
+      "length": 0.3,
+      "dir": [1, 0.2],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [-0.12, -0.02, 0.02], [-40, 36, 40], "outSine"],
+        [0.42, [0.08, 0.02, -0.14], [-40, -34, -36], "outCubic"],
+        [0.66, [0.1, 0.03, -0.1], [-42, -38, -40], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "mace_quick_swing_1": {
+      "comment": "Rapid clicks: a short bash down.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.04, -0.08, -0.1], [-46, 4, 4], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "mace_quick_swing_2": {
+      "comment": "Rapid clicks: a short hook to the left.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.12, -0.03, -0.08], [-36, 30, 26], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "mace_crit": {
+      "comment": "A critical hit: heaved up high and brought crashing down with the whole arm behind it.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.22, [0.02, 0.18, 0.1], [36, -6, -6], "outSine"],
+        [0.48, [-0.08, -0.18, -0.24], [-96, 8, 6], "outQuart"],
+        [0.72, [-0.08, -0.2, -0.2], [-100, 8, 6], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "mace_guard": {
+      "comment": "Blocking: held upright before you, the head high.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.2, -0.2, -0.62], "tip": [-0.08, 1, 0.06], "edge": [1, 0.08, 0], "ease": "outCubic"}
+      ]
+    },
+    "mace_dual_guard": {
+      "comment": "Blocking with a mace in each hand: both upright before you, leaning in at the top (the left hand's is this, mirrored).",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.2, -0.22, -0.62], "tip": [-0.26, 0.96, 0.06], "edge": [0.96, 0.26, 0], "ease": "outCubic"}
+      ]
+    },
+    "mace_draw": {
+      "comment": "The draw: brought up hanging by its wrist loop, spun once round the wrist, then caught by the grip.",
+      "length": 0.6,
+      "right": [
+        [0.0, [0.06, -0.42, 0.1], [-30, 10, 10]],
+        {"t": 0.12, "pos": [0.3, -0.18, -0.84], "tip": [0, 1, 0], "edge": [1, 0, 0], "ease": "outSine"},
+        {"t": 0.62, "pos": [0.3, -0.17, -0.84], "tip": [0, 1, 0], "edge": [1, 0, 0], "ease": "linear"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [0, 0, 0], [0, 0, 0]],
+        [0.1825, [0.1255, -0.052, 0], [0, 0, -45], "inSine"],
+        [0.245, [0.1775, -0.1775, 0], [0, 0, -90], "linear"],
+        [0.3075, [0.1255, -0.303, 0], [0, 0, -135], "linear"],
+        [0.37, [0, -0.355, 0], [0, 0, -180], "linear"],
+        [0.4325, [-0.1255, -0.303, 0], [0, 0, -225], "linear"],
+        [0.495, [-0.1775, -0.1775, 0], [0, 0, -270], "linear"],
+        [0.5575, [-0.1255, -0.052, 0], [0, 0, -315], "linear"],
+        [0.62, [0, 0, 0], [0, 0, -360], "outSine"]
+      ]
+    }
+  }
+}

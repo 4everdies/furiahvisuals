@@ -1,0 +1,149 @@
+{
+  "comment": "Furiah's Visuals: the chainsaw's animation set (two hands). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). The left fist stays on the front handle unless leftAt sends it to the starter. Events: rev (the throttle opens), stall (the engine is cut), pull (the cord's sound), start (the engine catches), smoke (an exhaust puff). Every clip here is original to this mod.",
+  "clips": {
+    "chainsaw_swing_1": {
+      "comment": "A push straight ahead into the target, the bar dipping as it bites.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.18, [0.02, 0.03, 0.06], [5, -3, 0], "outSine"],
+        [0.46, [-0.05, 0.0, -0.2], [-6, 7, -3], "outCubic"],
+        [0.7, [-0.04, -0.01, -0.15], [-5, 6, -2], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "events": [[0.3, "smoke"]]
+    },
+    "chainsaw_swing_2": {
+      "comment": "A level sweep from right to left.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.16, [0.08, 0.02, 0.03], [2, -20, -4], "outSine"],
+        [0.46, [-0.13, 0.0, -0.12], [0, 24, 6], "outCubic"],
+        [0.7, [-0.16, -0.02, -0.08], [-2, 29, 8], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "events": [[0.3, "smoke"]]
+    },
+    "chainsaw_swing_3": {
+      "comment": "A downward cut: the saw lifted, then brought down through the target.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.18, [0.01, 0.1, 0.04], [20, -4, -3], "outSine"],
+        [0.46, [-0.03, -0.08, -0.12], [-20, 6, 4], "outCubic"],
+        [0.7, [-0.03, -0.1, -0.08], [-24, 6, 4], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "events": [[0.3, "smoke"]]
+    },
+    "chainsaw_quick_swing_1": {
+      "comment": "Rapid clicks: a short shove forward.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.03, -0.01, -0.12], [-4, 5, -2], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "chainsaw_quick_swing_2": {
+      "comment": "Rapid clicks: a short sweep to the left.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.08, -0.01, -0.06], [0, 14, 4], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "chainsaw_crit": {
+      "comment": "A critical hit: heaved up high, then driven down and forward with the whole body.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.2, [0.02, 0.16, 0.06], [30, -6, -6], "outSine"],
+        [0.46, [-0.05, -0.12, -0.2], [-26, 8, 6], "outQuart"],
+        [0.7, [-0.05, -0.12, -0.14], [-28, 8, 6], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "events": [[0.25, "smoke"], [0.5, "smoke"]]
+    },
+    "chainsaw_guard": {
+      "comment": "Blocking: the saw raised and turned up, its bar angled across the view as a shield.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [1.0, [-0.08, 0.14, 0.05], [16, 10, 24], "outCubic"]
+      ]
+    },
+    "chainsaw_draw": {
+      "comment": "The draw: swung up from below, the engine starting as it comes.",
+      "length": 0.6,
+      "right": [
+        [0.0, [0.06, -0.55, 0.1], [-40, 12, -10]],
+        [0.6, [0.0, 0.02, 0.0], [4, 0, 0], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "events": [[0.55, "smoke"]]
+    },
+    "chainsaw_pull_start": {
+      "comment": "Pull-start: the engine is cut and the saw turned to show its starter side; the left hand leaves the front handle for the starter's grip and yanks the cord out toward you; it snaps back, the engine coughs twice and catches with a puff of smoke; two blips of the throttle on the way back to the hold.",
+      "length": 3.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.14, "pos": [0.7, -0.3, -1.05], "tip": [-0.88, 0.14, -0.45], "edge": [0.08, -0.97, -0.15], "ease": "inOutCubic"},
+        {"t": 0.22, "pos": [0.7, -0.3, -1.05], "tip": [-0.88, 0.14, -0.45], "edge": [0.08, -0.97, -0.15], "ease": "inOutSine"},
+        {"t": 0.27, "pos": [0.68, -0.27, -1.04], "tip": [-0.88, 0.18, -0.44], "edge": [0.08, -0.97, -0.15], "ease": "outSine"},
+        {"t": 0.36, "pos": [0.7, -0.3, -1.05], "tip": [-0.88, 0.14, -0.45], "edge": [0.08, -0.97, -0.15], "ease": "inOutSine"},
+        {"t": 0.41, "pos": [0.7, -0.3, -1.05], "tip": [-0.88, 0.14, -0.45], "edge": [0.08, -0.97, -0.15], "ease": "inOutSine"},
+        {"t": 0.44, "pos": [0.7, -0.28, -1.05], "tip": [-0.88, 0.17, -0.44], "edge": [0.08, -0.97, -0.15], "ease": "outSine"},
+        {"t": 0.58, "pos": [0.7, -0.3, -1.05], "tip": [-0.88, 0.14, -0.45], "edge": [0.08, -0.97, -0.15], "ease": "inOutSine"},
+        [0.86, [0, 0, 0], [0, 0, 0], "inOutCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0]]
+      ],
+      "leftAt": {"part": "starter", "keys": [[0.0, 0], [0.05, 0], [0.2, 1, "inOutSine"], [0.46, 1], [0.6, 0, "inOutSine"]]},
+      "parts": {
+        "starter": [[0.0, 0, 0], [0.22, 0, 0], [0.3, 0, 0.2, "outCubic"], [0.35, 0, 0.2], [0.43, 0, 0, "inCubic"]],
+        "cord": [[0.0, 0, 0, 1], [0.22, 0, 0, 1], [0.3, 0, 0, 17.67, "outCubic"], [0.35, 0, 0, 17.67], [0.43, 0, 0, 1, "inCubic"]]
+      },
+      "events": [[0.01, "stall"], [0.22, "pull"], [0.414, "start"], [0.416, "smoke"], [0.66, "rev"], [0.74, "rev"]]
+    },
+    "chainsaw_rev": {
+      "comment": "Rev: the saw lifted and turned a little toward you, revved once, then twice quickly, then held open; it kicks up with each blip.",
+      "length": 2.6,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [-0.04, 0.08, -0.06], [10, 12, -8], "inOutSine"],
+        [0.19, [-0.04, 0.1, -0.06], [15, 12, -12], "outSine"],
+        [0.3, [-0.04, 0.08, -0.06], [10, 12, -8], "inOutSine"],
+        [0.42, [-0.04, 0.1, -0.06], [15, 12, -12], "outSine"],
+        [0.47, [-0.04, 0.08, -0.06], [11, 12, -9], "inOutSine"],
+        [0.51, [-0.04, 0.1, -0.06], [15, 12, -13], "outSine"],
+        [0.62, [-0.04, 0.08, -0.06], [10, 12, -8], "inOutSine"],
+        [0.68, [-0.04, 0.11, -0.065], [17, 12, -14], "outSine"],
+        [0.86, [-0.04, 0.1, -0.06], [15, 12, -12], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "events": [[0.17, "rev"], [0.18, "smoke"], [0.4, "rev"], [0.49, "rev"], [0.5, "smoke"], [0.66, "rev"], [0.7, "rev"], [0.74, "rev"], [0.78, "rev"], [0.8, "smoke"]]
+    },
+    "chainsaw_look_over": {
+      "comment": "Look over: the left hand lets go; the saw is lifted by its rear handle and turned to show its starter side with the bar raised, then rolled to bring its top and the chain along the bar toward you, and lowered back into both hands.",
+      "length": 3.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.2, "pos": [0.52, -0.5, -0.95], "tip": [-0.75, 0.38, -0.54], "edge": [0.15, -0.88, -0.45], "ease": "inOutCubic"},
+        {"t": 0.42, "pos": [0.52, -0.49, -0.95], "tip": [-0.74, 0.4, -0.54], "edge": [0.16, -0.88, -0.45], "ease": "inOutSine"},
+        {"t": 0.58, "pos": [0.5, -0.52, -0.92], "tip": [-0.7, 0.3, -0.65], "edge": [0.5, -0.35, -0.79], "ease": "inOutCubic"},
+        {"t": 0.78, "pos": [0.5, -0.51, -0.92], "tip": [-0.7, 0.32, -0.64], "edge": [0.52, -0.33, -0.79], "ease": "inOutSine"},
+        [0.98, [0, 0, 0], [0, 0, 0], "inOutCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0]]
+      ],
+      "leftFree": [[0.0, 0], [0.12, 1, "inOutSine"], [0.84, 1], [0.97, 0, "inOutSine"]]
+    }
+  }
+}

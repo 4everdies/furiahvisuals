@@ -1,0 +1,132 @@
+{
+  "comment": "Furiah's Visuals: the rapier's animation set (a fencer's hold: the hand forward, the blade angled up and to the left). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). bend: the blade flexed toward its edge. Every clip here is original to this mod.",
+  "clips": {
+    "rapier_swing_1": {
+      "comment": "A lunging thrust, the point brought down onto the target.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.03, 0.0, 0.06], [4, -6, 0], "outSine"],
+        [0.4, [-0.06, 0.04, -0.34], [-18, -10, 0], "outQuart"],
+        [0.66, [-0.04, 0.02, -0.2], [-14, -8, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "rapier_swing_2": {
+      "comment": "A small cut: a flick of the wrist down to the left.",
+      "length": 0.3,
+      "dir": [-0.7, -0.6],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.02, 0.04, 0.0], [10, -8, -10], "outSine"],
+        [0.4, [-0.06, -0.04, -0.06], [-16, 14, 26], "outCubic"],
+        [0.66, [-0.07, -0.05, -0.03], [-18, 16, 30], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "rapier_swing_3": {
+      "comment": "A high thrust, the arm straight out.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.03, 0.02, 0.06], [6, -4, 0], "outSine"],
+        [0.4, [-0.04, 0.08, -0.36], [-8, -8, 0], "outQuart"],
+        [0.66, [-0.03, 0.06, -0.22], [-6, -6, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "rapier_quick_swing_1": {
+      "comment": "Rapid clicks: a short thrust.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.03, 0.02, -0.2], [-10, -6, 0], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "rapier_quick_swing_2": {
+      "comment": "Rapid clicks: a short flick down to the left.",
+      "length": 0.3,
+      "dir": [-0.7, -0.6],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.04, -0.03, -0.04], [-10, 10, 18], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "rapier_crit": {
+      "comment": "A critical hit: a deep lunge.",
+      "length": 0.3,
+      "dir": [0, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.04, 0.0, 0.08], [6, -6, 0], "outSine"],
+        [0.4, [-0.08, 0.02, -0.46], [-20, -10, 0], "outQuart"],
+        [0.66, [-0.06, 0.02, -0.3], [-16, -8, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "rapier_guard": {
+      "comment": "Blocking: a high parry, the blade raised across the view.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.22, -0.22, -0.62], "tip": [-0.72, 0.66, -0.2], "edge": [0.3, 0.3, -0.9], "ease": "outCubic"}
+      ]
+    },
+    "rapier_dual_guard": {
+      "comment": "Blocking with a rapier in each hand: the blades crossed in an X (the left hand's is this, mirrored).",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.17, -0.3, -0.62], "tip": [-0.58, 0.8, -0.14], "edge": [-0.8, -0.52, -0.3], "ease": "outCubic"}
+      ]
+    },
+    "rapier_draw": {
+      "comment": "The draw: up from the hip with a small flourish of the point.",
+      "length": 0.6,
+      "right": [
+        [0.0, [0.02, -0.5, 0.15], [-60, 10, 30]],
+        [0.5, [0.0, 0.03, 0.0], [6, 0, -8], "outCubic"],
+        [0.75, [0.0, 0.0, 0.0], [-3, 0, 4], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "rapier_salute": {
+      "comment": "The fencer's salute: the hilt raised before the face, the blade upright; held; then swept down and out to the right, and back on guard.",
+      "length": 2.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.18, "pos": [0.08, -0.24, -0.52], "tip": [0.02, 1, 0.08], "edge": [-1, 0, 0.05], "ease": "inOutCubic"},
+        {"t": 0.52, "pos": [0.08, -0.23, -0.52], "tip": [0.0, 1, 0.1], "edge": [-1, 0, 0.03], "ease": "inOutSine"},
+        {"t": 0.72, "pos": [0.34, -0.42, -0.6], "tip": [0.5, -0.6, -0.62], "edge": [0.3, 0.62, -0.72], "ease": "inOutCubic"},
+        {"t": 0.8, "pos": [0.34, -0.42, -0.6], "tip": [0.5, -0.6, -0.62], "edge": [0.3, 0.62, -0.72], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "rapier_flex": {
+      "comment": "Flex: the blade brought level; the left fist presses the point and the blade bows; let go, it springs back and quivers still.",
+      "length": 2.8,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.15, "pos": [0.34, -0.3, -0.74], "tip": [-0.95, 0.2, -0.22], "edge": [0, 1, 0], "ease": "inOutCubic"},
+        {"t": 0.56, "pos": [0.35, -0.31, -0.73], "tip": [-0.94, 0.24, -0.22], "edge": [0, 1, 0], "ease": "inOutSine"},
+        {"t": 0.6, "pos": [0.34, -0.3, -0.74], "tip": [-0.95, 0.2, -0.22], "edge": [0, 1, 0], "ease": "outSine"},
+        {"t": 0.82, "pos": [0.34, -0.3, -0.74], "tip": [-0.95, 0.2, -0.22], "edge": [0, 1, 0], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "leftShow": [[0.0, 0], [0.12, 1, "outCubic"], [0.6, 1], [0.72, 0, "inCubic"]],
+      "leftAlong": {
+        "from": [0, 0.88, 0],
+        "to": [0, 0.96, 0],
+        "along": [[0.0, 1]],
+        "hold": [[0.0, 0], [0.18, 0], [0.28, 1, "outCubic"], [0.56, 1], [0.6, 0, "outSine"]]
+      },
+      "bend": [[0.0, 0], [0.28, 0], [0.5, 0.32, "inOutSine"], [0.56, 0.34], [0.6, -0.14, "outSine"], [0.64, 0.07, "inOutSine"],
+        [0.68, -0.03, "inOutSine"], [0.72, 0.0, "inOutSine"]]
+    }
+  }
+}

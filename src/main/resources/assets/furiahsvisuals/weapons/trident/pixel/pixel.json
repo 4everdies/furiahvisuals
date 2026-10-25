@@ -1,0 +1,25 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20],
+    "paint": [31, 32, 33, 34, 35]
+  },
+  "fixed": [],
+  "layers": [
+    {"part": "prongs", "sprite": "prong middle.png", "plane": "front", "at": [-1, 38, 0], "depth": 1},
+    {"part": "prongs", "sprite": "barbs middle.png", "plane": "front", "at": [-2, 34, 0], "depth": 1},
+    {"part": "prongs", "sprite": "prong left.png", "plane": "front", "at": [-4, 36, 0], "depth": 1},
+    {"part": "prongs", "sprite": "barb left.png", "plane": "front", "at": [-5, 33, 0], "depth": 1},
+    {"part": "prongs", "sprite": "prong right.png", "plane": "front", "at": [2, 36, 0], "depth": 1},
+    {"part": "prongs", "sprite": "barb right.png", "plane": "front", "at": [4, 33, 0], "depth": 1},
+    {"part": "fork", "sprite": "fork.png", "plane": "front", "at": [-4, 27, 0], "depth": 2},
+    {"part": "pearl", "sprite": "pearl.png", "plane": "front", "at": [-1, 28, 0.5], "depth": 2},
+    {"part": "fittings", "sprite": "collar.png", "plane": "front", "at": [-1.5, 25, 0], "depth": 3},
+    {"part": "shaft", "sprite": "shaft.png", "plane": "front", "at": [-1.5, 24, 0], "depth": 3},
+    {"part": "fittings", "sprite": "ferrule.png", "plane": "front", "at": [-1.5, -26, 0], "depth": 3}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

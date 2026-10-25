@@ -1,0 +1,113 @@
+{
+  "comment": "Furiah's Visuals: the butterfly knife's own clips (its swings and guard are the knife set's). The safe handle stays in the fist; parts: blade turns about its pin on the safe handle, handle_b (the bite handle) rides on the blade and turns about the blade's other pin. Open is 0, 0; closed is blade -180, handle_b -180. Closing: the blade swings clockwise over the right while the bite handle goes round the left, then the bite handle swings down over the right; opening is the same backwards, so the handles never meet. The flips play facing you (the knife's flat toward the camera), the wrist flicking with each swing. Every clip here is original to this mod.",
+  "clips": {
+    "butterfly_knife_draw": {
+      "comment": "The draw: it comes up closed and flips open: the bite handle swings out over the right, then the blade swings up as that handle falls round into the hand.",
+      "length": 0.75,
+      "right": [
+        [0.0, [0.06, -0.42, 0.06], [-34, 8, -16]],
+        [0.36, [0.0, 0.02, 0.0], [6, 0, 12], "outCubic"],
+        [0.6, [0.0, -0.01, 0.0], [-4, 0, -9], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "parts": {
+        "handle_b": [[0.0, -180], [0.14, -180], [0.44, 0, "inOutSine"]],
+        "blade": [[0.0, -180], [0.38, -180], [0.76, 0, "outCubic"]]
+      }
+    },
+    "butterfly_knife_basic": {
+      "comment": "Basic: turned to face you, it closes (the blade over the right, then the bite handle) and opens again, a flick of the wrist for each swing.",
+      "length": 2.6,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.12, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutCubic"},
+        {"t": 0.16, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.21, "pos": [0.23, -0.23, -0.58], "tip": [0.11, 1, -0.1], "edge": [1, -0.11, 0.1], "ease": "outSine"},
+        {"t": 0.3, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.34, "pos": [0.23, -0.23, -0.58], "tip": [0.11, 1, -0.1], "edge": [1, -0.11, 0.1], "ease": "outSine"},
+        {"t": 0.42, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.49, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.53, "pos": [0.21, -0.21, -0.58], "tip": [-0.4, 0.93, -0.1], "edge": [0.93, 0.4, 0.1], "ease": "outSine"},
+        {"t": 0.6, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.65, "pos": [0.21, -0.21, -0.58], "tip": [-0.4, 0.93, -0.1], "edge": [0.93, 0.4, 0.1], "ease": "outSine"},
+        {"t": 0.74, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.84, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "parts": {
+        "blade": [[0.0, 0], [0.17, 0], [0.3, -180, "inOutSine"], [0.6, -180], [0.74, 0, "inOutSine"]],
+        "handle_b": [[0.0, 0], [0.3, 0], [0.42, -180, "inOutSine"], [0.49, -180], [0.6, 0, "inOutSine"]]
+      }
+    },
+    "butterfly_knife_aerial": {
+      "comment": "Aerial: it closes facing you, is tossed up spinning once like a pinwheel, caught by the safe handle, and flipped open.",
+      "length": 2.8,
+      "weaponSpace": "view",
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.1, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutCubic"},
+        {"t": 0.14, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.19, "pos": [0.23, -0.23, -0.58], "tip": [0.11, 1, -0.1], "edge": [1, -0.11, 0.1], "ease": "outSine"},
+        {"t": 0.26, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.3, "pos": [0.23, -0.23, -0.58], "tip": [0.11, 1, -0.1], "edge": [1, -0.11, 0.1], "ease": "outSine"},
+        {"t": 0.36, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.4, "pos": [0.22, -0.26, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.43, "pos": [0.22, -0.18, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "outCubic"},
+        {"t": 0.62, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.67, "pos": [0.22, -0.25, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "outSine"},
+        {"t": 0.72, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.75, "pos": [0.21, -0.21, -0.58], "tip": [-0.4, 0.93, -0.1], "edge": [0.93, 0.4, 0.1], "ease": "outSine"},
+        {"t": 0.81, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.85, "pos": [0.21, -0.21, -0.58], "tip": [-0.4, 0.93, -0.1], "edge": [0.93, 0.4, 0.1], "ease": "outSine"},
+        {"t": 0.91, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.43, [0, 0, 0], [0, 0, 0]],
+        [0.48, [0, 0.12, 0.02], [0, 0, -90], "outSine"],
+        [0.53, [0, 0.19, 0.03], [0, 0, -180], "linear"],
+        [0.58, [0, 0.17, 0.03], [0, 0, -270], "linear"],
+        [0.66, [0, 0, 0], [0, 0, -360], "inSine"]
+      ],
+      "parts": {
+        "blade": [[0.0, 0], [0.15, 0], [0.26, -180, "inOutSine"], [0.81, -180], [0.92, 0, "inOutSine"]],
+        "handle_b": [[0.0, 0], [0.26, 0], [0.36, -180, "inOutSine"], [0.72, -180], [0.81, 0, "inOutSine"]]
+      },
+      "events": [[0.43, "release"], [0.66, "catch"]]
+    },
+    "butterfly_knife_rollover": {
+      "comment": "Rollover: it closes facing you and rolls end over end across the back of the fingers, then flips open with a flourish.",
+      "length": 2.6,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.1, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutCubic"},
+        {"t": 0.14, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.19, "pos": [0.23, -0.23, -0.58], "tip": [0.11, 1, -0.1], "edge": [1, -0.11, 0.1], "ease": "outSine"},
+        {"t": 0.26, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.3, "pos": [0.23, -0.23, -0.58], "tip": [0.11, 1, -0.1], "edge": [1, -0.11, 0.1], "ease": "outSine"},
+        {"t": 0.36, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.4, "pos": [0.22, -0.23, -0.57], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.62, "pos": [0.22, -0.23, -0.57], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.68, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.72, "pos": [0.21, -0.2, -0.58], "tip": [-0.4, 0.93, -0.1], "edge": [0.93, 0.4, 0.1], "ease": "outSine"},
+        {"t": 0.78, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        {"t": 0.82, "pos": [0.21, -0.2, -0.58], "tip": [-0.45, 0.9, -0.1], "edge": [0.9, 0.45, 0.1], "ease": "outSine"},
+        {"t": 0.9, "pos": [0.22, -0.22, -0.58], "tip": [-0.15, 1, -0.1], "edge": [1, 0.15, 0.1], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.4, [0, 0, 0], [0, 0, 0]],
+        [0.455, [0, 0.03, 0.02], [90, 0, 0], "inSine"],
+        [0.51, [0, 0.055, 0.0], [180, 0, 0], "linear"],
+        [0.565, [0, 0.03, -0.02], [270, 0, 0], "linear"],
+        [0.62, [0, 0, 0], [360, 0, 0], "outSine"]
+      ],
+      "parts": {
+        "blade": [[0.0, 0], [0.15, 0], [0.26, -180, "inOutSine"], [0.78, -180], [0.9, 0, "inOutSine"]],
+        "handle_b": [[0.0, 0], [0.26, 0], [0.36, -180, "inOutSine"], [0.68, -180], [0.78, 0, "inOutSine"]]
+      }
+    }
+  }
+}

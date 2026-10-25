@@ -1,0 +1,32 @@
+{
+  "pixel": 0.03125,
+  "materials": {
+    "blade": [1, 2, 3, 4, 5],
+    "metal": [11, 12, 13, 14, 15],
+    "handle": [16, 17, 18, 19, 20],
+    "energy": [26, 27, 28, 29, 30]
+  },
+  "fixed": [],
+  "layers": [
+    {"part": "metal", "sprite": "ferrule point.png", "plane": "front", "at": [-0.5, -21, 0], "depth": 1},
+    {"part": "metal", "sprite": "ferrule.png", "plane": "front", "at": [-1.5, -20, 0], "depth": 3},
+    {"part": "staff", "sprite": "shaft.png", "plane": "front", "at": [-1.5, 16, 0], "depth": 3},
+    {"part": "staff", "sprite": "knot low.png", "plane": "front", "at": [-2.5, -13, 0], "depth": 1},
+    {"part": "staff", "sprite": "knot mid.png", "plane": "front", "at": [1.5, -6, 0], "depth": 1},
+    {"part": "staff", "sprite": "knot high.png", "plane": "side", "at": [0, 9, -2.5], "depth": 1},
+    {"part": "staff", "sprite": "knot top.png", "plane": "front", "at": [-2.5, 14, 0], "depth": 1},
+    {"part": "metal", "sprite": "band low.png", "plane": "front", "at": [-1.5, -3, 0], "depth": 3},
+    {"part": "metal", "sprite": "band high.png", "plane": "front", "at": [-1.5, 4, 0], "depth": 3},
+    {"part": "metal", "sprite": "collar.png", "plane": "front", "at": [-1.5, 17, 0], "depth": 3},
+    {"part": "cradle", "sprite": "prong left.png", "plane": "front", "at": [-3, 26, 1], "depth": 1},
+    {"part": "cradle", "sprite": "prong right.png", "plane": "front", "at": [1, 26, 1], "depth": 1},
+    {"part": "cradle", "sprite": "prong front.png", "plane": "side", "at": [0, 26, -3], "depth": 1},
+    {"part": "crystal", "sprite": "crystal.png", "plane": "front", "at": [-1.5, 26, 0], "depth": 1, "depthMap": "crystal_depth.png"},
+    {"part": "shard_1", "sprite": "shard 1.png", "plane": "front", "at": [2, 23, 0], "depth": 1},
+    {"part": "shard_2", "sprite": "shard 2.png", "plane": "front", "at": [-2, 23, -2], "depth": 1},
+    {"part": "shard_3", "sprite": "shard 3.png", "plane": "front", "at": [-2, 24, 1.5], "depth": 1},
+    {"part": "shard_4", "sprite": "shard 4.png", "plane": "front", "at": [0, 23, 2.5], "depth": 1}
+  ],
+  "icon": "icon.png",
+  "icon16": "icon16.png"
+}

@@ -1,0 +1,138 @@
+{
+  "comment": "Furiah's Visuals: the greatsword's animation set (two hands; it rests on the right shoulder, the blade leaving the view at the top right). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). The left fist stays on the grip. Every clip here is original to this mod.",
+  "clips": {
+    "greatsword_swing_1": {
+      "comment": "A heavy overhead chop: lifted off the shoulder and brought down in front.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.0, 0.08, 0.04], [14, -6, -4], "outSine"],
+        [0.45, [-0.14, -0.1, -0.18], [-115, 8, 6], "outCubic"],
+        [0.7, [-0.14, -0.14, -0.14], [-122, 10, 8], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greatsword_swing_2": {
+      "comment": "A wide sweep from right to left, the blade level.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.08, 0.0, 0.04], [-50, -30, -40], "outSine"],
+        [0.45, [-0.3, -0.06, -0.16], [-75, 70, 40], "outCubic"],
+        [0.7, [-0.34, -0.08, -0.1], [-78, 78, 46], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greatsword_swing_3": {
+      "comment": "A diagonal chop from high on the right down to the lower left.",
+      "length": 0.3,
+      "dir": [-0.7, -0.7],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.02, 0.06, 0.04], [10, -10, -20], "outSine"],
+        [0.45, [-0.22, -0.12, -0.16], [-95, 30, 40], "outCubic"],
+        [0.7, [-0.24, -0.15, -0.12], [-100, 34, 44], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greatsword_quick_swing_1": {
+      "comment": "Rapid clicks: a short chop.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.06, -0.06, -0.1], [-60, 4, 4], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greatsword_quick_swing_2": {
+      "comment": "Rapid clicks: a short sweep to the left.",
+      "length": 0.3,
+      "dir": [-1, 0],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.14, -0.04, -0.08], [-50, 34, 20], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greatsword_crit": {
+      "comment": "A critical hit: heaved high and smashed straight down.",
+      "length": 0.3,
+      "dir": [0, -1],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.2, [0.02, 0.14, 0.06], [24, -6, -6], "outSine"],
+        [0.45, [-0.12, -0.16, -0.22], [-125, 6, 4], "outQuart"],
+        [0.7, [-0.12, -0.18, -0.18], [-128, 6, 4], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greatsword_guard": {
+      "comment": "Blocking: the blade held level across the view, its edge up toward the blow.",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.18, -0.26, -0.6], "tip": [-0.95, 0.28, -0.12], "edge": [0, 0.35, -0.94], "ease": "outCubic"}
+      ]
+    },
+    "greatsword_draw": {
+      "comment": "The draw: brought over from behind the right shoulder and settled on it.",
+      "length": 0.65,
+      "right": [
+        [0.0, [0.1, 0.25, 0.2], [60, -20, -20]],
+        [0.6, [0.0, 0.02, 0.0], [-4, 0, 2], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "greatsword_plant_lean": {
+      "comment": "Plant & lean: taken off the shoulder and planted point down in front and to the right, the left hand letting go and the right resting on the hilt; it is leaned on, breathing, then shouldered again.",
+      "length": 3.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.16, "pos": [0.22, -0.36, -0.7], "tip": [0.02, -1, -0.05], "edge": [1, 0, 0], "ease": "inOutCubic"},
+        {"t": 0.22, "pos": [0.22, -0.38, -0.7], "tip": [0.02, -1, -0.05], "edge": [1, 0, 0], "ease": "outSine"},
+        {"t": 0.48, "pos": [0.22, -0.4, -0.68], "tip": [0.02, -1, -0.12], "edge": [1, 0, 0], "ease": "inOutSine"},
+        {"t": 0.66, "pos": [0.22, -0.39, -0.69], "tip": [0.02, -1, -0.08], "edge": [1, 0, 0], "ease": "inOutSine"},
+        {"t": 0.82, "pos": [0.22, -0.38, -0.7], "tip": [0.02, -1, -0.05], "edge": [1, 0, 0], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "leftFree": [[0.0, 0], [0.14, 1, "inOutSine"], [0.84, 1], [0.97, 0, "inOutSine"]]
+    },
+    "greatsword_shoulder_bounce": {
+      "comment": "Shoulder bounce: lifted a little off the shoulder and let fall back onto it, twice.",
+      "length": 2.0,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [0.0, 0.07, 0.02], [-8, 0, 0], "inOutSine"],
+        [0.22, [0.0, -0.02, 0.0], [3, 0, 0], "inCubic"],
+        [0.28, [0.0, 0.01, 0.0], [0, 0, 0], "outSine"],
+        [0.42, [0.0, 0.07, 0.02], [-8, 0, 0], "inOutSine"],
+        [0.52, [0.0, -0.025, 0.0], [4, 0, 0], "inCubic"],
+        [0.58, [0.0, 0.008, 0.0], [0, 0, 0], "outSine"],
+        [0.7, [0, 0, 0], [0, 0, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0]]
+      ]
+    },
+    "greatsword_look_over": {
+      "comment": "Look over: brought down level across the view, slowly turned over to show both flats, and shouldered again.",
+      "length": 3.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.18, "pos": [0.26, -0.3, -0.72], "tip": [-0.96, 0.22, -0.15], "edge": [0, -1, 0], "ease": "inOutCubic"},
+        {"t": 0.82, "pos": [0.25, -0.29, -0.72], "tip": [-0.95, 0.25, -0.14], "edge": [0, -1, 0], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.36, [0, 0, 0], [0, 0, 0]],
+        [0.48, [0, 0, 0], [0, 90, 0], "inOutSine"],
+        [0.6, [0, 0, 0], [0, 180, 0], "inOutSine"],
+        [0.72, [0, 0, 0], [0, 180, 0]],
+        [0.78, [0, 0, 0], [0, 90, 0], "inSine"],
+        [0.84, [0, 0, 0], [0, 0, 0], "outSine"]
+      ]
+    }
+  }
+}

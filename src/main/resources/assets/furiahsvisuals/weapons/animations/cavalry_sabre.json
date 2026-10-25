@@ -1,0 +1,137 @@
+{
+  "comment": "Furiah's Visuals: the sabre's animation set (a curved cavalry sabre held upright at the right; named apart from the Photon Edge's saber set). Swings run in vanilla's swing time; t is 0..1 of each clip. right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}); weapon: turns in the fist's frame (x edge, y handle, z flat). Every clip here is original to this mod.",
+  "clips": {
+    "cavalry_sabre_swing_1": {
+      "comment": "A fast forehand slash from the wrist: the blade whipped down from high on the right to the lower left, the arm hardly moving.",
+      "length": 0.3,
+      "dir": [-0.7, -0.7],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0.03, 0.05, 0.02], [8, -10, -24], "outSine"],
+        [0.4, [-0.12, -0.06, -0.06], [-30, 18, 70], "outCubic"],
+        [0.62, [-0.14, -0.08, -0.03], [-34, 20, 76], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "cavalry_sabre_swing_2": {
+      "comment": "A backhand slash: the wrist turned over and the blade whipped from the left back across to the right, level.",
+      "length": 0.3,
+      "dir": [1, 0.05],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [-0.06, 0.0, 0.0], [-20, 26, 50], "outSine"],
+        [0.4, [0.08, -0.02, -0.08], [-24, -30, -60], "outCubic"],
+        [0.62, [0.1, -0.03, -0.04], [-26, -34, -66], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "cavalry_sabre_swing_3": {
+      "comment": "A rising cut from the lower left up to the right, the edge leading.",
+      "length": 0.3,
+      "dir": [0.75, 0.65],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [-0.08, -0.1, 0.0], [-20, 14, 50], "outSine"],
+        [0.4, [0.07, 0.09, -0.08], [14, -22, -30], "outCubic"],
+        [0.62, [0.09, 0.11, -0.04], [18, -26, -34], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "cavalry_sabre_quick_swing_1": {
+      "comment": "Rapid clicks: a short wrist cut down to the left.",
+      "length": 0.3,
+      "dir": [-0.8, -0.55],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [-0.08, -0.05, -0.05], [-22, 10, 40], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "cavalry_sabre_quick_swing_2": {
+      "comment": "Rapid clicks: a short wrist cut back to the right.",
+      "length": 0.3,
+      "dir": [0.9, 0.2],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.3, [0.06, 0.02, -0.05], [-10, -18, -36], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "cavalry_sabre_crit": {
+      "comment": "A critical hit: a cavalry sabre's long cutting arc: drawn up high over the right shoulder and swept down across the body in one long arc, the edge leading all the way, the arm reaching out.",
+      "length": 0.3,
+      "dir": [-0.6, -0.8],
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.2, [0.08, 0.16, 0.08], [30, -20, -40], "outSine"],
+        [0.5, [-0.2, -0.12, -0.2], [-50, 30, 80], "outQuart"],
+        [0.72, [-0.24, -0.16, -0.12], [-56, 34, 86], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "cavalry_sabre_guard": {
+      "comment": "Blocking: the hand high, the blade slanting down across the body to the lower left, its edge turned up toward the blow (a hanging guard).",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.2, -0.14, -0.66], "tip": [-0.78, -0.52, -0.34], "edge": [-0.25, 0.75, -0.6], "ease": "outCubic"}
+      ]
+    },
+    "cavalry_sabre_dual_guard": {
+      "comment": "Blocking with a sabre in each hand: both hands high, the blades slanting down and crossing low in front (the left hand's is this, mirrored).",
+      "length": 0.06,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 1.0, "pos": [0.16, -0.1, -0.62], "tip": [-0.7, -0.6, -0.38], "edge": [-0.3, 0.72, -0.62], "ease": "outCubic"}
+      ]
+    },
+    "cavalry_sabre_draw": {
+      "comment": "The draw: whipped out of the scabbard at the left hip in a fast horizontal flick across the front to the right, then turned up into the hold.",
+      "length": 0.5,
+      "right": [
+        {"t": 0.0, "pos": [-0.15, -0.62, -0.42], "tip": [-0.75, -0.05, 0.66], "edge": [0, -1, 0]},
+        {"t": 0.3, "pos": [0.2, -0.38, -0.62], "tip": [0.1, 0, -1], "edge": [1, 0, 0.1], "ease": "outSine"},
+        {"t": 0.5, "pos": [0.46, -0.4, -0.66], "tip": [0.95, 0.15, -0.28], "edge": [0.2, -0.98, 0.1], "ease": "outCubic"},
+        [0.75, [0.02, 0.03, 0.0], [6, -4, -6], "outSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    },
+    "cavalry_sabre_flourish": {
+      "comment": "Flourish: a quick figure-eight: the blade whirled edge first in a circle on the right of the hand (forward and down past the outside of the arm, up behind), crossed over in front and whirled round again on the left, then caught back into the hold.",
+      "length": 2.0,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.14, "pos": [0.22, -0.26, -0.78], "tip": [-0.34, 0.94, 0], "edge": [0.66, 0.24, -0.71], "ease": "inOutCubic"},
+        {"t": 0.43, "pos": [0.23, -0.26, -0.78], "tip": [-0.34, 0.94, 0], "edge": [0.66, 0.24, -0.71], "ease": "linear"},
+        {"t": 0.49, "pos": [0.15, -0.25, -0.78], "tip": [0.34, 0.94, 0], "edge": [-0.66, 0.24, -0.71], "ease": "inOutSine"},
+        {"t": 0.77, "pos": [0.14, -0.26, -0.78], "tip": [0.34, 0.94, 0], "edge": [-0.66, 0.24, -0.71], "ease": "linear"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [0, 0, 0], [0, 0, 0]],
+        [0.22, [0, 0, 0], [0, 0, -90], "inSine"],
+        [0.29, [0, 0, 0], [0, 0, -180], "linear"],
+        [0.36, [0, 0, 0], [0, 0, -270], "linear"],
+        [0.43, [0, 0, 0], [0, 0, -360], "outSine"],
+        [0.49, [0, 0, 0], [0, 0, -360]],
+        [0.56, [0, 0, 0], [0, 0, -450], "inSine"],
+        [0.63, [0, 0, 0], [0, 0, -540], "linear"],
+        [0.7, [0, 0, 0], [0, 0, -630], "linear"],
+        [0.77, [0, 0, 0], [0, 0, -720], "outSine"]
+      ]
+    },
+    "cavalry_sabre_salute": {
+      "comment": "The cavalry salute: the hilt brought up before the chin, the blade upright, its edge to the left; held; then lowered, the point down and forward to the left (clear of the arm); held a moment, and back to the hold.",
+      "length": 2.4,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.2, "pos": [0.07, -0.26, -0.48], "tip": [0.02, 1, 0.06], "edge": [-1, 0, 0.03], "ease": "inOutCubic"},
+        {"t": 0.48, "pos": [0.07, -0.25, -0.48], "tip": [0.0, 1, 0.08], "edge": [-1, 0, 0.01], "ease": "inOutSine"},
+        {"t": 0.7, "pos": [0.2, -0.12, -0.66], "tip": [-0.4, -0.7, -0.6], "edge": [0.2, 0.55, -0.78], "ease": "inOutCubic"},
+        {"t": 0.8, "pos": [0.2, -0.12, -0.66], "tip": [-0.4, -0.7, -0.6], "edge": [0.2, 0.55, -0.78], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ]
+    }
+  }
+}

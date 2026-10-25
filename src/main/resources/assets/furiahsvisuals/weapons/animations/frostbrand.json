@@ -1,0 +1,18 @@
+{
+  "comment": "Furiah's Visuals: Frostbrand's own clips (its swings, guard and draw are the saber set's). right: the fist in view space (offset in blocks, turns in degrees about the fist: pitch up, yaw left, roll counter-clockwise), or an exact place and direction ({pos, tip, edge}). flare: the cold mist rolling off (more of it). reveal: how far up the blade its edges are (Ice finish: past it they are gone; 1: whole). Every clip here is original to this mod.",
+  "clips": {
+    "frostbrand_frost_breath": {
+      "comment": "Frost breath: the blade brought up side on; mist rolls off it, its edges melt away from the tip down, then the ice grows back along them from the guard to the tip, a frosty glint running ahead.",
+      "length": 3.0,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        {"t": 0.14, "pos": [0.28, -0.22, -0.62], "tip": [-0.86, 0.45, -0.24], "edge": [0.46, 0.89, 0], "ease": "inOutCubic"},
+        {"t": 0.5, "pos": [0.28, -0.21, -0.62], "tip": [-0.85, 0.47, -0.24], "edge": [0.47, 0.88, 0], "ease": "inOutSine"},
+        {"t": 0.86, "pos": [0.28, -0.22, -0.62], "tip": [-0.86, 0.45, -0.24], "edge": [0.46, 0.89, 0], "ease": "inOutSine"},
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "flare": [[0.0, 0], [0.14, 0], [0.24, 1, "outCubic"], [0.7, 1], [0.92, 0, "inOutSine"]],
+      "reveal": [[0.0, 1.08], [0.22, 1.08], [0.36, 0, "inCubic"], [0.44, 0], [0.86, 1.08, "inOutSine"]]
+    }
+  }
+}

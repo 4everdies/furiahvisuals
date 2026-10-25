@@ -1,0 +1,95 @@
+{
+  "comment": "Furiah's Visuals: inspects for the Vanilla weapon (the held item exactly as the resource pack draws it). right: the item moved (view space, blocks) and turned (degrees: pitch, yaw, roll) about the middle of vanilla's held item; weapon: a further turn about the same point and an offset in view space (a toss). Turns of more than 90 degrees are split into keys of at most 90. Every clip here is original to this mod.",
+  "clips": {
+    "vanilla_flip_present": {
+      "comment": "Weapons Ref 2: from a relaxed low hold the item flips toward the camera, sideways and huge (~0.4 s), spins back and is held upright at the right like a trophy, swaying gently (~1 s), then back to the hold.",
+      "length": 2.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.07, [0.02, -0.07, 0.01], [-8, 0, 0], "inOutSine"],
+        [0.2, [-0.24, 0.06, 0.13], [6, -48, 12], "outCubic"],
+        [0.33, [-0.06, 0.08, 0.02], [0, -14, 38], "inOutCubic"],
+        [0.44, [-0.09, 0.1, 0.0], [0, -10, 34], "outSine"],
+        [0.58, [-0.09, 0.11, 0.0], [3, -7, 31], "inOutSine"],
+        [0.72, [-0.09, 0.1, 0.0], [-3, -13, 37], "inOutSine"],
+        [0.84, [-0.09, 0.09, 0.0], [1, -9, 34], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.08, [0, 0, 0], [0, 0, 0]],
+        [0.13, [0, 0, 0], [0, 0, 90], "inSine"],
+        [0.18, [0, 0, 0], [0, 0, 180], "linear"],
+        [0.23, [0, 0, 0], [0, 0, 270], "linear"],
+        [0.29, [0, 0, 0], [0, 0, 360], "outSine"]
+      ]
+    },
+    "vanilla_look_over": {
+      "comment": "Brought closer and turned to show one side, then the other.",
+      "length": 3.2,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [-0.2, 0.1, 0.15], [4, 30, 12], "inOutCubic"],
+        [0.4, [-0.21, 0.11, 0.16], [8, 44, 20], "inOutSine"],
+        [0.8, [-0.2, 0.1, 0.15], [2, 34, 8], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutCubic"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.42, [0, 0, 0], [0, 0, 0]],
+        [0.53, [0, 0, 0], [0, 90, 0], "inOutSine"],
+        [0.64, [0, 0, 0], [0, 180, 0], "inOutSine"],
+        [0.84, [0, 0, 0], [0, 180, 0], "inOutSine"],
+        [0.92, [0, 0, 0], [0, 90, 0], "inSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "outSine"]
+      ]
+    },
+    "vanilla_twirl": {
+      "comment": "Two turns spun about its middle.",
+      "length": 1.5,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.15, [-0.05, 0.06, 0.05], [4, 8, 0], "inOutSine"],
+        [0.8, [-0.05, 0.06, 0.05], [4, 8, 0], "inOutSine"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.14, [0, 0, 0], [0, 0, 0]],
+        [0.22, [0, 0, 0], [0, 0, 90], "inSine"],
+        [0.3, [0, 0, 0], [0, 0, 180], "linear"],
+        [0.38, [0, 0, 0], [0, 0, 270], "linear"],
+        [0.46, [0, 0, 0], [0, 0, 360], "linear"],
+        [0.54, [0, 0, 0], [0, 0, 450], "linear"],
+        [0.62, [0, 0, 0], [0, 0, 540], "linear"],
+        [0.72, [0, 0, 0], [0, 0, 630], "outSine"],
+        [0.86, [0, 0, 0], [0, 0, 720], "outSine"]
+      ]
+    },
+    "vanilla_toss_catch": {
+      "comment": "Tossed up end over end and caught.",
+      "length": 1.7,
+      "right": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.12, [0.0, -0.05, 0.0], [-8, 0, 0], "inOutSine"],
+        [0.2, [0.0, 0.03, 0.0], [6, 0, 0], "outCubic"],
+        [0.7, [0.0, 0.0, 0.0], [0, 0, 0], "inOutSine"],
+        [0.76, [0.0, -0.05, 0.0], [-6, 0, 0], "outCubic"],
+        [1.0, [0, 0, 0], [0, 0, 0], "inOutSine"]
+      ],
+      "weapon": [
+        [0.0, [0, 0, 0], [0, 0, 0]],
+        [0.2, [0, 0, 0], [0, 0, 0]],
+        [0.26, [0, 0.13, 0.0], [90, 0, 0], "outSine"],
+        [0.32, [0, 0.23, 0.0], [180, 0, 0], "linear"],
+        [0.39, [0, 0.29, 0.0], [270, 0, 0], "linear"],
+        [0.45, [0, 0.31, 0.0], [360, 0, 0], "linear"],
+        [0.51, [0, 0.29, 0.0], [450, 0, 0], "linear"],
+        [0.58, [0, 0.23, 0.0], [540, 0, 0], "linear"],
+        [0.64, [0, 0.13, 0.0], [630, 0, 0], "linear"],
+        [0.7, [0, 0, 0], [720, 0, 0], "inSine"]
+      ],
+      "events": [[0.2, "release"], [0.7, "catch"]]
+    }
+  }
+}
